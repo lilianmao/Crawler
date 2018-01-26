@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一个展开合拢的菜单效果</title>
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+<style>
+* { margin:0; padding:0; }
+ul,li { list-style:none; }
+.catalog { width:164px; margin:0 auto;}
+.t1 { height:4px; background:url(images/bg_catalog.gif) left top no-repeat; }
+.t2 { background:url(images/bg_catalog.gif) -164px top repeat-y; }
+.t3 { height:4px; background:url(images/bg_catalog.gif) left bottom no-repeat; }
+.t2 h2 { height:81px; background:url(images/bg_catalog_logo.gif) center no-repeat; text-indent:-9999px; }
+.t2 h3 { heigth:36px; line-height:36px; margin:0 1px; text-indent:26px; background:url(images/bg_catalog_icon.gif) no-repeat 13px 14px; font-size:14px; border-top:1px solid #fFF; }
+.t2 ul { padding:10px 0; font-size:12px; }
+.t2 li { text-indent:27px; height:30px; line-height:30px; }
+.selected { display:block;}
+.unselected {display:none;}
+</style>
+</head>
+<body>
+<div class="re_left">
+<div class="catalog">
+<div class="t1"></div> 
+<div class="t2">
+ <h2>资源</h2>
+ <h3><a href="javascript:void(0);" src="#">平台使用说明</a></h3>
+ <ul class="unselected">
+ <li><a href="#">平台介绍</a></li>
+ <li><a href="#">应用开发说明</a></li>
+ <li><a href="#">应用审核流程</a></li>
+ <li style="display:none;"><a href="#">成功案例</a></li>
+ <li><a href="#">开发者协议</a></li>
+ </ul>
+ <h3><a href="javascript:void(0);" src="#">API说明</a></h3>
+ <ul class="unselected">
+ <li><a href="#">API文档</a></li>
+ <li><a href="#">Oauth授权说明</a></li>
+ <li><a href="#">API调用权限</a></li>
+ </ul>
+ <h3><a href="javascript:void(0);" src="#">SDK及资源下载</a></h3>
+ <ul class="unselected">
+ <li><a href="#">SDK下载</a></li>
+ <li><a href="#">视觉素材下载</a></li>
+ </ul>
+ <h3><a href="javascript:void(0);" src="#">帮助中心</a></h3>
+ <ul class="unselected">
+ <li><a href="#">常见问题解答</a></li>
+ <li><a href="#">返回错误码说明</a></li>
+ </ul>
+</div>
+<div class="t3"></div>
+</div>
+</div>
+<script type="text/javascript">
+ $(document).ready(function(){
+ var catalogIndex=[0,0];
+ if (catalogIndex[0]==2){catalogIndex[0]=3;}
+ else if(catalogIndex[0]==3){catalogIndex[0]=2;}
+ if(catalogIndex.length==0){catalogIndex=[0,0];}
+ $(".re_left .catalog h3 a").each(function(){
+  $(this).attr("src",$(this).attr("href"));
+  });
+ $(".re_left .catalog").find("ul").css("border-bottom",0).end().find("h3:eq("+catalogIndex[0]+")").addClass("open").find("a").attr("href","javascript:void(0);").end().next().css("display","block").find("li:eq("+(catalogIndex[1]-1==-1?9999:catalogIndex[1]-1)+")").addClass("active");$(".re_left .catalog").find("h3").last().css("border-bottom-width","0");});
+$(".re_left .catalog").find("h3").bind("click",function(){
+  if ($(this).hasClass("open"))
+  {
+  if ($(this).next().find(".active").size()==0)
+  {
+   $(this).next().slideUp(500,function(){
+   $(this).prev().removeClass("open");
+   }); 
+  }
+  else
+  {
+   $(this).next().slideUp(500,function(){
+   $(this).prev().removeClass("open");
+   //window.location.href=$(this).prev().find("a").attr("src");
+   });
+  }
+  }
+  else
+  {
+  $(this).parent().find("ul").slideUp("slow").end().find("h3").removeClass("open");
+  $(this).addClass("open").next().slideDown(500,function(){
+  if ($(this).nextAll("h3").size()>0)
+  {$(this).parent().find("h3").last().css("border-bottom-width","1px");}
+  else
+  {$(this).parent().find("h3").last().css("border-bottom-width","0");}
+  window.location.href=$(this).prev().find("a").attr("src");
+  });
+  }
+  return false;
+}); 
+</script>
+<br><div align="center">提示：如果有错误，请刷新页面。</div>
+</body>
+</html>

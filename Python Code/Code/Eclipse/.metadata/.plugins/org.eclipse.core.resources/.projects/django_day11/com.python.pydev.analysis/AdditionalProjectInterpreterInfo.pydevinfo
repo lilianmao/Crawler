@@ -1,0 +1,93 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\django_day11\com.python.pydev.analysis\v2_indexcache
+web.tests|1454312182737775000|E:\Python Code\Code\Eclipse\django_day11\web\tests.py
+manage|1454234510765402000|E:\Python Code\Code\Eclipse\django_day11\manage.py
+django_day11.__init__|1454233640910648000|E:\Python Code\Code\Eclipse\django_day11\django_day11\__init__.py
+web.templatetags.__init__|1456312024650592000|E:\Python Code\Code\Eclipse\django_day11\web\templatetags\__init__.py
+web.forms|1456580052684209000|E:\Python Code\Code\Eclipse\django_day11\web\forms.py
+django_day11.settings|1456313964380384000|E:\Python Code\Code\Eclipse\django_day11\django_day11\settings.py
+django_day11.wsgi|1454233640909645000|E:\Python Code\Code\Eclipse\django_day11\django_day11\wsgi.py
+web.models|1455174951827078000|E:\Python Code\Code\Eclipse\django_day11\web\models.py
+web.urls|1456578918013983000|E:\Python Code\Code\Eclipse\django_day11\web\urls.py
+django_day11.urls|1456644103020500000|E:\Python Code\Code\Eclipse\django_day11\django_day11\urls.py
+web.templatetags.lilin|1456312839993983000|E:\Python Code\Code\Eclipse\django_day11\web\templatetags\lilin.py
+web.views|1456580593863069000|E:\Python Code\Code\Eclipse\django_day11\web\views.py
+web.__init__|1454312182739777000|E:\Python Code\Code\Eclipse\django_day11\web\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+17=UserType
+12=User
+8=web.tests
+15=Group
+7=web.forms
+16=Args
+3=django_day11.settings
+4=django_day11.wsgi
+13=RegisterForm
+5=web.models
+9=web.urls
+1=django_day11.urls
+10=UserInfo
+11=Asset
+6=web.templatetags.lilin
+2=web.views
+18=SimpleTest
+14=Temp
+-- END DICTIONARY
+-- START TREE 1
+35
+act|1|active!10@
+add|1|Add!18@
+adm|1|ADMINS!27@
+all|1|ALLOWED_HOSTS!27@
+app|1|application!35@
+arg|1|Args!41@
+ass|2|AssetList!18@Asset!41@
+bas|1|BASE_DIR!27@
+dat|1|DATABASES!27@
+deb|1|DEBUG!27@
+del|1|Delete!18@
+get|1|Get!18@
+gro|1|Group!41@
+ind|1|index!18@
+ins|1|INSTALLED_APPS!27@
+lan|1|LANGUAGE_CODE!27@
+lis|1|list!18@
+log|2|LOGGING!27@Login!18@
+man|1|MANAGERS!27@
+med|2|MEDIA_ROOT!27@MEDIA_URL!27@
+mid|1|MIDDLEWARE_CLASSES!27@
+mym|1|mymethod!50@
+reg|3|Register!18@RegisterForm!57@register!51@
+roo|1|ROOT_URLCONF!27@
+sec|1|SECRET_KEY!27@
+ses|1|SESSION_SERIALIZER!27@
+sim|1|SimpleTest!65@
+sit|1|SITE_ID!27@
+sta|4|STATICFILES_FINDERS!27@STATICFILES_DIRS!27@STATIC_URL!27@STATIC_ROOT!27@
+tem|4|Temp!41@TEMPLATE_DIRS!27@TEMPLATE_DEBUG!27@TEMPLATE_LOADERS!27@
+tim|1|TIME_ZONE!27@
+upd|1|Update!18@
+url|2|urlpatterns!75@urlpatterns!11@
+use|6|USE_I18N!27@USE_TZ!27@UserType!41@User!41@UserInfo!41@USE_L10N!27@
+wsg|1|WSGI_APPLICATION!27@
+-- END TREE
+-- START TREE 2
+14
+age|1|Age!10&43@
+cre|2|CreateDate!10&43@create_date!11&43@
+ema|2|Email!12&43@email!13&59@
+gen|3|gender!14&43@Gender!10&43@GENDER_CHOICE!14&43@
+gro|1|group_relation!12&43@
+hos|1|hostname!11&43@
+mem|1|memo!10&43@
+nam|4|Name!12&43@Name!15&43@name!16&43@name!17&43@
+not|1|not_name!16&43@
+pas|1|password!10&43@
+tes|1|test_basic_addition!18&66@
+typ|1|typeId!10&43@
+upd|1|update!11&43@
+use|2|username!13&59@username!10&43@
+-- END TREE

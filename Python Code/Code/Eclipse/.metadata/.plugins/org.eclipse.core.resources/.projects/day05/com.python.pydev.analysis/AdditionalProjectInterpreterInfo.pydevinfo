@@ -1,0 +1,43 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\day05\com.python.pydev.analysis\v2_indexcache
+index|1453619017046504000|E:\Python Code\Code\Eclipse\day05\index.py
+utility.sql_helper|1453619627977696000|E:\Python Code\Code\Eclipse\day05\utility\sql_helper.py
+main.index|1453537623077287000|E:\Python Code\Code\Eclipse\day05\main\index.py
+model.admin|1453542342522418000|E:\Python Code\Code\Eclipse\day05\model\admin.py
+main.__init__|1453461656871718000|E:\Python Code\Code\Eclipse\day05\main\__init__.py
+conf|1453619574400749000|E:\Python Code\Code\Eclipse\day05\conf.py
+model.__init__|1453538015483351000|E:\Python Code\Code\Eclipse\day05\model\__init__.py
+utility.__init__|1453538039803131000|E:\Python Code\Code\Eclipse\day05\utility\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+7=Admin.__init__
+4=index
+5=utility.sql_helper
+3=main.index
+1=model.admin
+2=conf
+9=Admin
+8=MySqlHelper
+6=MySqlHelper.__init__
+-- END DICTIONARY
+-- START TREE 1
+8
+adm|1|Admin!9@
+con|2|conn_dict!19@conn!27@
+cur|1|cur!27@
+dat|1|data!27@
+li|1|li!27@
+mai|1|main!34@
+mys|1|MySqlHelper!41@
+rec|1|reCount!27@
+-- END TREE
+-- START TREE 2
+5
+__c|1|__conn_dict!6&43@
+__h|1|__helper!7&11@
+__i|2|__init__!8&42@__init__!9&10@
+che|1|CheckValidate!9&10@
+get|3|Get_One!8&42@Get_Dict!8&42@Get_One!9&10@
+-- END TREE

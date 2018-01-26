@@ -1,0 +1,41 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\Socket\com.python.pydev.analysis\v2_indexcache
+threadsocketdemo.client|1453626788210000000|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\client.py
+main.SocketTest|1454143636598639000|E:\Python Code\Code\Eclipse\Socket\main\SocketTest.py
+threadsocketdemo.server|1453632595550238000|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\server.py
+main.index|1454143354103511000|E:\Python Code\Code\Eclipse\Socket\main\index.py
+threadsocketdemo.__init__|1453630062509389000|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\__init__.py
+socketdemo.__init__|1453623463391033000|E:\Python Code\Code\Eclipse\Socket\socketdemo\__init__.py
+main.__init__|1453620058630948000|E:\Python Code\Code\Eclipse\Socket\main\__init__.py
+socketdemo.client|1453626788210639000|E:\Python Code\Code\Eclipse\Socket\socketdemo\client.py
+socketdemo.server|1453626659329866000|E:\Python Code\Code\Eclipse\Socket\socketdemo\server.py
+-- END DISKCACHE
+-- START DICTIONARY
+7
+1=threadsocketdemo.client
+4=main.SocketTest
+6=threadsocketdemo.server
+5=main.index
+7=MyServer
+2=socketdemo.client
+3=socketdemo.server
+-- END DICTIONARY
+-- START TREE 1
+9
+cli|4|client_msg!11@client_msg!19@client!19@client!11@
+dat|3|data!27@data!19@data!11@
+fla|1|flag!27@
+han|2|handle_request!34@handle_request!42@
+ip_|3|ip_port!19@ip_port!11@ip_port!27@
+mai|2|main!34@main!42@
+mys|1|MyServer!49@
+ser|1|server!51@
+sk|1|sk!27@
+-- END TREE
+-- START TREE 2
+3
+fin|1|finish!7&50@
+han|1|handle!7&50@
+set|1|setup!7&50@
+-- END TREE

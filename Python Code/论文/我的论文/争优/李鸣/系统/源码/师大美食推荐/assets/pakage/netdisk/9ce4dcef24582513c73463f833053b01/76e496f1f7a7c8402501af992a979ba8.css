@@ -1,0 +1,28 @@
+/* 相册列表 */
+.photo-list   { width:88%; text-align:center; align:center; margin-left:auto; margin-right:auto;     }
+        
+.photo-list-single-div{  text-align:center;  margin-left:auto; margin-right:auto; width:80%; margin-top:10px; margin-bottom:10px; 
+                         background:url(/mnt/sdcard/bbaaabddhc/netdisk/343f727ba310fd2fef6b718bb8b5c671/78bfde5b41baafba5e56f9968b36f5b5.png) no-repeat; background-size:100% 200%;  
+                         text-align:center; align:center;  }     
+.photo-list-bg        {  }                  
+       
+.photo-list-top1      {  height:10px;width:20px; } 
+.photo-list-top2      {  }
+.photo-list-top3      {   }
+.photo-list-left      { }
+.photo-list-center    { text-align:center; align:center;  margin-left:auto; margin-right:auto;  }  
+.photo-list-right     { width: 25px;  }  
+.photo-list-bottom 1  {  }
+.photo-list-bottom2   {  }
+.photo-list-bottom3   {  }
+.photo-list-img-box   { overflow:hidden;    margin-bottom:25px;  width:100%;  } 
+.photo-list-img       { width:100%; height:auto; border:0px;  margin-right:15px;
+                         vertical-align:middle;    }       
+.photo-list-text1     {   }      
+.photo-list-text2     { color: #555; FONT-SIZE: 13px; line-height:18px; height:18px;  }         
+.photo-list-text3     { color: #1d4e88;  font-size: 11px; fload:left; line-height:12px;   }        
+.photo-list-icn1      { } 
+.photo-list-icn2      { } 
+.photo-list-page { height:31px; text-align:center; } 
+ 
+/* end相册列表 */

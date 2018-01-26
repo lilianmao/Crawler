@@ -1,0 +1,8 @@
+1，摘要英文
+2，目录对其
+3，目录重新生成
+4，图清单
+5，格式最终调整
+6，Python+MySQL的介绍
+7，页码
+8，Scrapy+Flask+SQLAlchemy

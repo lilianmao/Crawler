@@ -1,0 +1,43 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\day03\com.python.pydev.analysis\v2_indexcache
+main.function|1453023485936717000|E:\Python Code\Code\Eclipse\day03\main\function.py
+file.demo|1452841678304961000|E:\Python Code\Code\Eclipse\day03\file\demo.py
+main.sqlserverhelper|1452936311436955000|E:\Python Code\Code\Eclipse\day03\main\sqlserverhelper.py
+main.index|1452848905969005000|E:\Python Code\Code\Eclipse\day03\main\index.py
+main.__init__|1452837717950430000|E:\Python Code\Code\Eclipse\day03\main\__init__.py
+main.mysqlhelper|1452936306559603000|E:\Python Code\Code\Eclipse\day03\main\mysqlhelper.py
+main.Simple_Bank|1453117899703442000|E:\Python Code\Code\Eclipse\day03\main\Simple_Bank.py
+file.__init__|1452837717950000000|E:\Python Code\Code\Eclipse\day03\file\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+6=main.function
+5=file.demo
+4=main.index
+3=main.sqlserverhelper
+2=main.mysqlhelper
+1=main.Simple_Bank
+-- END DICTIONARY
+-- START TREE 1
+16
+cho|1|choice!11@
+cou|2|count!18@count!26@
+det|1|detail!34@
+fil|1|file_account!11@
+foo|1|Foo!42@
+ip|1|ip!51@
+job|1|job!35@
+lea|1|leave!11@
+log|1|login!34@
+mon|1|money!11@
+nam|1|name!35@
+pas|1|password!11@
+res|1|result!35@
+ret|2|retry_limit!11@retry_count!11@
+sel|1|sel!11@
+use|3|user!35@user_dict!11@username!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

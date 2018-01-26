@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\day11\com.python.pydev.analysis\v2_indexcache
+demo.conf|1454149478754271000|E:\Python Code\Code\Eclipse\day11\demo\conf.py
+demo.__init__|1454147597882271000|E:\Python Code\Code\Eclipse\day11\demo\__init__.py
+demo.index|1454226243150726000|E:\Python Code\Code\Eclipse\day11\demo\index.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=demo.conf
+1=demo.index
+-- END DICTIONARY
+-- START TREE 1
+5
+htt|1|httpd!11@
+ind|2|index!10@index!18@
+log|2|login!10@login!18@
+run|1|RunServer!10@
+url|2|url!19@url!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

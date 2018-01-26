@@ -1,0 +1,6 @@
+CSS选择器
+document.querySelectorAlldocument.querySelectorAll(".s.xst")	
+//css选择器语法是 点。xpath选择器语法是 下划线。——全都包含
+document.querySelectorAll("tbody em span")
+ocument.querySelectorAll("tbody cite")
+document.querySelectorAll(".bm_c tr")

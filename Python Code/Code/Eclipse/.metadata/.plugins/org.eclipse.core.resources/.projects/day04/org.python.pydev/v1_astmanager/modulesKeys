@@ -1,0 +1,22 @@
+MODULES_MANAGER_V2
+Exception.__init__|E:\Python Code\Code\Eclipse\day04\Exception\__init__.py
+Exception.main|E:\Python Code\Code\Eclipse\day04\Exception\main.py
+decrator.__init__|E:\Python Code\Code\Eclipse\day04\decrator\__init__.py
+decrator.main|E:\Python Code\Code\Eclipse\day04\decrator\main.py
+homework.Person|E:\Python Code\Code\Eclipse\day04\homework\Person.py
+homework.__init__|E:\Python Code\Code\Eclipse\day04\homework\__init__.py
+homework.story|E:\Python Code\Code\Eclipse\day04\homework\story.py
+main.__init__|E:\Python Code\Code\Eclipse\day04\main\__init__.py
+main.demo|E:\Python Code\Code\Eclipse\day04\main\demo.py
+main.index|E:\Python Code\Code\Eclipse\day04\main\index.py
+oop.Multiple|E:\Python Code\Code\Eclipse\day04\oop\Multiple.py
+oop.__init__|E:\Python Code\Code\Eclipse\day04\oop\__init__.py
+oop.abstract|E:\Python Code\Code\Eclipse\day04\oop\abstract.py
+oop.index|E:\Python Code\Code\Eclipse\day04\oop\index.py
+oop.sqlhelper|E:\Python Code\Code\Eclipse\day04\oop\sqlhelper.py
+reflect.__init__|E:\Python Code\Code\Eclipse\day04\reflect\__init__.py
+reflect.backend.__init__|E:\Python Code\Code\Eclipse\day04\reflect\backend\__init__.py
+reflect.backend.account|E:\Python Code\Code\Eclipse\day04\reflect\backend\account.py
+reflect.backend.admin|E:\Python Code\Code\Eclipse\day04\reflect\backend\admin.py
+reflect.backend.web|E:\Python Code\Code\Eclipse\day04\reflect\backend\web.py
+reflect.index|E:\Python Code\Code\Eclipse\day04\reflect\index.py

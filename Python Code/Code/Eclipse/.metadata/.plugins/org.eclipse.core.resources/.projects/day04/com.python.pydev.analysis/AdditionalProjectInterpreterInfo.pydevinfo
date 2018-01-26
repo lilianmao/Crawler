@@ -1,0 +1,121 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\day04\com.python.pydev.analysis\v2_indexcache
+reflect.__init__|1453187270449318000|E:\Python Code\Code\Eclipse\day04\reflect\__init__.py
+reflect.backend.account|1453187893519304000|E:\Python Code\Code\Eclipse\day04\reflect\backend\account.py
+oop.sqlhelper|1453365353575332000|E:\Python Code\Code\Eclipse\day04\oop\sqlhelper.py
+main.demo|1453186920054904000|E:\Python Code\Code\Eclipse\day04\main\demo.py
+reflect.backend.web|1453187660178621000|E:\Python Code\Code\Eclipse\day04\reflect\backend\web.py
+decrator.main|1453192394254986000|E:\Python Code\Code\Eclipse\day04\decrator\main.py
+Exception.__init__|1453367546584607000|E:\Python Code\Code\Eclipse\day04\Exception\__init__.py
+main.__init__|1453186543226927000|E:\Python Code\Code\Eclipse\day04\main\__init__.py
+homework.Person|1453452004990873000|E:\Python Code\Code\Eclipse\day04\homework\Person.py
+homework.__init__|1453447562863607000|E:\Python Code\Code\Eclipse\day04\homework\__init__.py
+decrator.__init__|1453189901134155000|E:\Python Code\Code\Eclipse\day04\decrator\__init__.py
+reflect.backend.admin|1453189336112831000|E:\Python Code\Code\Eclipse\day04\reflect\backend\admin.py
+oop.abstract|1453363686149466000|E:\Python Code\Code\Eclipse\day04\oop\abstract.py
+oop.index|1453361547045075000|E:\Python Code\Code\Eclipse\day04\oop\index.py
+reflect.backend.__init__|1453187600983040000|E:\Python Code\Code\Eclipse\day04\reflect\backend\__init__.py
+main.index|1453187113152501000|E:\Python Code\Code\Eclipse\day04\main\index.py
+oop.Multiple|1453362989981615000|E:\Python Code\Code\Eclipse\day04\oop\Multiple.py
+Exception.main|1453370776622593000|E:\Python Code\Code\Eclipse\day04\Exception\main.py
+reflect.index|1453367146291721000|E:\Python Code\Code\Eclipse\day04\reflect\index.py
+oop.__init__|1453193259550004000|E:\Python Code\Code\Eclipse\day04\oop\__init__.py
+homework.story|1453448296819947000|E:\Python Code\Code\Eclipse\day04\homework\story.py
+-- END DISKCACHE
+-- START DICTIONARY
+31
+23=D
+11=oop.sqlhelper
+26=A
+7=decrator.main
+25=B
+24=C
+4=homework.Person
+19=Weixin
+29=MyException.__init__
+22=Father
+9=reflect.backend.admin
+20=story
+30=Father.__init__
+8=main.index
+1=oop.Multiple
+16=Person.Clothes
+31=Son.__init__
+10=reflect.backend.account
+17=Person.__init__
+6=main.demo
+28=MsSqlHelper
+12=homework.__init__
+2=oop.abstract
+5=oop.index
+27=Alert
+13=Exception.main
+18=MyException
+21=Son
+3=reflect.index
+14=homework.story
+15=Person
+-- END DICTIONARY
+-- START TREE 1
+32
+A|1|A!9@
+B|1|B!9@
+C|1|C!9@
+D|1|D!9@
+ale|1|Alert!17@
+arr|1|array!27@
+d|1|d!11@
+dat|2|data!35@data!27@
+f|1|f!19@
+fat|1|Father!41@
+foo|1|Foo!50@
+fun|3|fun1!58@func!67@func!27@
+ind|1|index!74@
+log|2|Login!82@Logout!82@
+mod|2|model!27@module!67@
+mss|1|MsSqlHelper!89@
+mye|1|MyException!25@
+obj|1|obj!27@
+out|1|outer!58@
+p|1|p!99@
+p1|1|p1!35@
+p2|1|p2!35@
+per|1|Person!33@
+res|1|res!107@
+s|1|s!99@
+s1|1|s1!43@
+son|1|Son!41@
+sto|1|story!113@
+str|2|str2!67@str1!67@
+use|1|userspace!27@
+val|1|Validate!106@
+wei|1|Weixin!17@
+-- END TREE
+-- START TREE 2
+24
+__c|3|__call__!15&34@__clothes!16&35@__clothes!17&35@
+__g|1|__Gene!17&35@
+__i|10|__init__!18&26@__init__!19&18@__init__!20&114@__init__!21&42@__init__!22&42@__init__!23&10@__init__!24&10@__init__!25&10@__init__!26&10@__init__!15&34@
+__m|1|__metaclass__!27&19@
+__s|1|__str__!18&26@
+add|1|add!28&90@
+age|1|age!17&35@
+bad|2|Bad!21&42@Bad!22&42@
+bar|1|Bar!21&42@
+clo|1|Clothes!15&34@
+del|1|delete!28&90@
+err|1|error!29&27@
+fig|1|fight!15&34@
+fna|1|Fname!30&43@
+fun|2|Func!22&42@fun!15&34@
+nam|1|name!17&35@
+sav|2|save!24&10@save!26&10@
+sel|1|select!28&90@
+sen|2|Send!19&18@Send!27&18@
+sna|1|Sname!31&43@
+sta|1|staticstr!15&35@
+tal|1|talk!15&34@
+upd|1|update!28&90@
+wei|1|weight!17&35@
+-- END TREE

@@ -1,0 +1,10 @@
+MODULES_MANAGER_V2
+main.SocketTest|E:\Python Code\Code\Eclipse\Socket\main\SocketTest.py
+main.__init__|E:\Python Code\Code\Eclipse\Socket\main\__init__.py
+main.index|E:\Python Code\Code\Eclipse\Socket\main\index.py
+socketdemo.__init__|E:\Python Code\Code\Eclipse\Socket\socketdemo\__init__.py
+socketdemo.client|E:\Python Code\Code\Eclipse\Socket\socketdemo\client.py
+socketdemo.server|E:\Python Code\Code\Eclipse\Socket\socketdemo\server.py
+threadsocketdemo.__init__|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\__init__.py
+threadsocketdemo.client|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\client.py
+threadsocketdemo.server|E:\Python Code\Code\Eclipse\Socket\threadsocketdemo\server.py

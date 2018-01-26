@@ -1,0 +1,75 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\Python Code\Code\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\day06\com.python.pydev.analysis\v2_indexcache
+producer_demo.demo|1453972866889056000|E:\Python Code\Code\Eclipse\day06\producer_demo\demo.py
+thread_demo.mythread|1453890603175301000|E:\Python Code\Code\Eclipse\day06\thread_demo\mythread.py
+ftp.__init__|1453803646256201000|E:\Python Code\Code\Eclipse\day06\ftp\__init__.py
+thread_demo.index|1453963407501059000|E:\Python Code\Code\Eclipse\day06\thread_demo\index.py
+producer_demo.consumer_producer|1454055159835251000|E:\Python Code\Code\Eclipse\day06\producer_demo\consumer_producer.py
+ftp.server|1453881700586443000|E:\Python Code\Code\Eclipse\day06\ftp\server.py
+thread_demo.__init__|1453884535949226000|E:\Python Code\Code\Eclipse\day06\thread_demo\__init__.py
+producer_demo.__init__|1453963423042671000|E:\Python Code\Code\Eclipse\day06\producer_demo\__init__.py
+thread_demo.thread_lock|1454057770753166000|E:\Python Code\Code\Eclipse\day06\thread_demo\thread_lock.py
+thread_demo.thread_event|1454138345798417000|E:\Python Code\Code\Eclipse\day06\thread_demo\thread_event.py
+ftp.client|1453877109373877000|E:\Python Code\Code\Eclipse\day06\ftp\client.py
+-- END DISKCACHE
+-- START DICTIONARY
+14
+14=MyThread
+5=producer_demo.demo
+1=thread_demo.mythread
+9=Consumer
+6=thread_demo.index
+13=MyServer
+12=Producer.__init__
+11=Consumer.__init__
+7=ftp.server
+3=producer_demo.consumer_producer
+10=Producer
+8=thread_demo.thread_lock
+4=ftp.client
+2=thread_demo.thread_event
+-- END DICTIONARY
+-- START TREE 1
+32
+bar|1|Bar!10@
+c|1|c!19@
+c1|1|c1!27@
+c2|1|c2!27@
+con|4|Consumer!26@container!35@consumer!18@Consumer!41@
+dat|1|data!35@
+eve|1|event!19@
+f|1|f!35@
+fil|2|file_name!35@file_size!35@
+fla|1|Flag!35@
+foo|1|Foo!50@
+inp|1|input!35@
+ins|1|instance!59@
+ip_|1|ip_port!35@
+lil|1|lilin!43@
+loc|1|lock!67@
+mys|1|MyServer!57@
+myt|1|MyThread!9@
+nam|1|name!43@
+num|2|num1!67@num2!67@
+p|1|p!19@
+p1|1|p1!27@
+p2|1|p2!27@
+pro|3|producer!18@Producer!26@Producer!41@
+q|1|q!27@
+que|1|queue!43@
+run|1|run!66@
+sen|1|send_size!35@
+sk|1|sk!35@
+t|1|t!67@
+t1|2|t1!51@t1!11@
+tem|1|temp!43@
+-- END TREE
+-- START TREE 2
+5
+__i|2|__init__!9&42@__init__!10&42@
+__n|2|__Name!11&43@__Name!12&43@
+__q|2|__Queue!11&43@__Queue!12&43@
+han|1|handle!13&58@
+run|3|run!9&42@run!10&42@run!14&10@
+-- END TREE

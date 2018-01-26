@@ -1,0 +1,26 @@
+/* 标准栏目信息显示 */
+.column-div     { width:96%;overflow:hidden;padding-top:6px;padding-right:5px; padding-bottom:20px; 
+		      text-align:center; margin-left:auto;margin-right:auto; }
+.column-single-div  { width:100%; }  
+.column-bg      { background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/b41e7297d2c1c1b480139e4cacd038f0.png) ; } 
+
+.column-top1    {  width:11px; height:11px;  } 
+.column-top2    {              height:11px;  background-position: 51% top; background-size: 200% 200px; }
+.column-top3    {  width:11px; height:11px;  background-position: -89px 0px;  }
+
+.column-left    {  background-position: 0px 11%; background-size: 100px 260%; }      
+.column-center  {  background-position: 51% 11%; background-size: 200% 260%;   padding: 10px; }           
+.column-right   {  background-position: -89px 11%; background-size: 100px 260%; }  
+.column-bottom1 {  background-position: 0px -89px; width:11px; height:11px; }
+.column-bottom2 {  background-position: 51% -89px;; background-size: 200% 200px; }
+.column-bottom3 {  background-position: -89px -89px; width:11px; height:11px;}
+ 
+.column-img-box {  }	
+.column-img     {  width:95%;height:auto; padding-left: 7px;  }		     						         
+.column-text1   {  }      													  
+.column-text2,.column-text2 p,.column-text2 div 
+ 		{ color:#555; font-size:12pt; font-weight:500; LINE-HEIGHT: 25px;  margin-bottom: 10px; margin-top:5px;margin-bottom:5px; }	                  
+.column-text3   { color:#666; font-size:10pt;   }								  
+.column-icn1 {}														   
+.column-icn2 {}		
+/* end栏目内容 */

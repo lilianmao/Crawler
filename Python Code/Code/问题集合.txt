@@ -1,0 +1,5 @@
+需要完成的任务：
+readCount读取错误，下一页，content，数据库的访问，数据展示
+
+不太懂的问题：
+morris-data.js 中 function函数

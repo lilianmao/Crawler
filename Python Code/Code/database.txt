@@ -1,0 +1,17 @@
+create table jihemei(
+    id int primary key auto_increment,
+    postMan varchar(20),
+    firstTime date,
+    title text,
+    content text,
+    readCount int,
+    replyCount int,
+    link varchar(200) UNIQUE
+    );
+
+create table Hot_Words(
+	id int primary key auto_increment,
+	word varchar(20)
+);
+
+TRUNCATE table jihemei

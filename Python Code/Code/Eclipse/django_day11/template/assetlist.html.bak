@@ -1,0 +1,44 @@
+{% load lilin %}
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+		</head>
+	<body>
+	
+	<h1>{{user}}</h1>
+	
+	<table border='1'>
+		{% for item in data %}
+			<tr>
+				<td>{{item.id}}</td>
+				<td>{% mymethod item.id %}</td>
+				<td>{{item.hostname}}</td>
+				<td>{{item.create_date | date:"Y-m-d H:i:s"}}</td>
+				<td>{{item.update_date | date:"Y-m-d H:i:s"}}</td>
+			</tr>
+		{% endfor %}
+		
+	</table>
+	
+	{% if not user %}
+		<h2>True</h2>
+		
+	{% else %}
+		<h2>False</h2>
+		
+	{% endif %}
+	
+	{% ifequal user 'alex' %}
+		<h2>alex</h2>
+		
+	{% else %}
+		<h2>not alex</h2>
+		
+	{% endifequal %}
+		
+	
+	
+	</body>
+</html>

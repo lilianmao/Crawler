@@ -1,0 +1,39 @@
+/* 首页 */
+    /* 商标区  */
+    .home-bg { background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/55f24406c1f459bafcaa4dfab489227a.jpg) no-repeat; background-size:100% 100%; 
+               overflow:hidden; width:100%; height:auto; }
+
+    .heme-div      { height: 93%; width:100%;  text-align:center; margin-top:3%;  }
+    .home-name-div { height:25%; text-align:center; margin-left:auto; margin-right:auto; vertical-align:middle;    }
+    .home-name     { COLOR: #fff; font-size:20px; font-weight:650; line-height:22px; vertical-align:middle; padding-top:6%;   }	 /* 企业名 */
+    .home-name img { text-align:center; margin-left:auto; margin-right:auto; height:50px; width:auto; vertical-align:middle;  } 	 /* 商标图片 */
+
+
+    /* 栏目内容区  */
+    .home-menu-div  {  height:75%; width:80%; padding-left:10%; padding-top:5% }
+    .home-menu-sigle-div {  }
+    .home-menu-bg   { width:80px; height:80px; border:1px; margin-top:9px; margin-right:9px; float:left; text-align:center; 	/* 内容栏目菜单展示区 */
+                      background-repeat:no-repeat; background-position:center; background-size:100% 100%; overflow:hidden;} 
+    .home-menu-text { COLOR: #fff; font-size:15px; font-weight:600; text-align:center; line-height:20px; margin-top:56px; } 
+    .home-menu-text-2 { font-size:11px; font-weight:500; text-align:center; line-height:18px; }				 /* 副栏（英或说明) */ 
+
+
+    /* 辅助功能区  */
+    .home-functiom-div { width:20%; vertical-align: bottom; padding-bottom: 5%;    }
+    .home-function-1   { width:31px; height:31px;  margin-bottom:7px;     							 /* 小图功能 */
+                        background:url("/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/90a45994fe773f0aff1d0d40d02f9387.png"); }
+    .home-function-2   { width:31px; height:31px; margin-bottom:7px; 
+                         background:url("/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/90a45994fe773f0aff1d0d40d02f9387.png") -41px 0; }
+    .home-function-3   { width:31px; height:31px;  margin-bottom:7px; 
+                         background:url("/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/90a45994fe773f0aff1d0d40d02f9387.png") -82px 0; }
+    .home-function-4   { width:31px; height:31px;  margin-bottom:5px; 
+                         background:url("/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/90a45994fe773f0aff1d0d40d02f9387.png") -123px 0; }
+
+
+    /* 信息列表区域(资讯)    */
+    .home-msg-list  {}
+    /* 产品列表区域(产品)    */
+    .home-pro-list  {}
+    /* 首页自管理区域(广告)  */
+    .home-adv {}
+/* end首页 */

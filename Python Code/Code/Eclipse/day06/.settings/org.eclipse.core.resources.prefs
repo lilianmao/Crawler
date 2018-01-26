@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//ftp/client.py=utf-8
+encoding//ftp/server.py=utf-8
+encoding//producer_demo/consumer_producer.py=utf-8
+encoding//producer_demo/demo.py=utf-8
+encoding//thread_demo/index.py=utf-8
+encoding//thread_demo/mythread.py=utf-8
+encoding//thread_demo/thread_event.py=utf-8
+encoding//thread_demo/thread_lock.py=utf-8

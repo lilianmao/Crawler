@@ -1,0 +1,12 @@
+MODULES_MANAGER_V2
+ftp.__init__|E:\Python Code\Code\Eclipse\day06\ftp\__init__.py
+ftp.client|E:\Python Code\Code\Eclipse\day06\ftp\client.py
+ftp.server|E:\Python Code\Code\Eclipse\day06\ftp\server.py
+producer_demo.__init__|E:\Python Code\Code\Eclipse\day06\producer_demo\__init__.py
+producer_demo.consumer_producer|E:\Python Code\Code\Eclipse\day06\producer_demo\consumer_producer.py
+producer_demo.demo|E:\Python Code\Code\Eclipse\day06\producer_demo\demo.py
+thread_demo.__init__|E:\Python Code\Code\Eclipse\day06\thread_demo\__init__.py
+thread_demo.index|E:\Python Code\Code\Eclipse\day06\thread_demo\index.py
+thread_demo.mythread|E:\Python Code\Code\Eclipse\day06\thread_demo\mythread.py
+thread_demo.thread_event|E:\Python Code\Code\Eclipse\day06\thread_demo\thread_event.py
+thread_demo.thread_lock|E:\Python Code\Code\Eclipse\day06\thread_demo\thread_lock.py

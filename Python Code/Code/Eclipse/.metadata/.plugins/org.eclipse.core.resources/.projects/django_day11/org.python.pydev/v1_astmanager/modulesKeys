@@ -1,0 +1,14 @@
+MODULES_MANAGER_V2
+django_day11.__init__|E:\Python Code\Code\Eclipse\django_day11\django_day11\__init__.py
+django_day11.settings|E:\Python Code\Code\Eclipse\django_day11\django_day11\settings.py
+django_day11.urls|E:\Python Code\Code\Eclipse\django_day11\django_day11\urls.py
+django_day11.wsgi|E:\Python Code\Code\Eclipse\django_day11\django_day11\wsgi.py
+manage|E:\Python Code\Code\Eclipse\django_day11\manage.py
+web.__init__|E:\Python Code\Code\Eclipse\django_day11\web\__init__.py
+web.forms|E:\Python Code\Code\Eclipse\django_day11\web\forms.py
+web.models|E:\Python Code\Code\Eclipse\django_day11\web\models.py
+web.templatetags.__init__|E:\Python Code\Code\Eclipse\django_day11\web\templatetags\__init__.py
+web.templatetags.lilin|E:\Python Code\Code\Eclipse\django_day11\web\templatetags\lilin.py
+web.tests|E:\Python Code\Code\Eclipse\django_day11\web\tests.py
+web.urls|E:\Python Code\Code\Eclipse\django_day11\web\urls.py
+web.views|E:\Python Code\Code\Eclipse\django_day11\web\views.py

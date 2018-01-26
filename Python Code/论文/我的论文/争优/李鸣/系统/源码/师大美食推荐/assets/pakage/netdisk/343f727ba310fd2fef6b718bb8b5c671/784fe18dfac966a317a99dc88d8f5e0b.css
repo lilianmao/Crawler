@@ -1,0 +1,23 @@
+/* 浮出菜单 */
+  #fc_menu      { overflow: hidden;  }
+  #fc_menu *    { position: relative; display:block; overflow: hidden;  }
+  #fc_menu div  { margin-right: 2px; margin-left: 10px; margin-bottom: 3px;                  
+                  background-color: #F2F2F2;
+                  border: 1px solid #E8E8E8;
+                  box-shadow: 1px 1px 3px #E8E8E8;
+                  background-clip: padding-box;
+                  border-radius: 6px;
+                 }
+
+  #fc_menu ul   { list-style: none; width: 135px;  }
+  #fc_menu ul li{ width: 125px;
+                  margin: 4px; margin-left:10px; margin-top:4px; 
+                  height: 36px;
+                  line-height: 30px;
+                  vertical-align: middle;
+                  border-bottom:1px solid #E8E8E8; }
+
+  #fc_menu span { font-size: 16px; font-weight: 600; }
+/* end浮出菜单 */
+
+

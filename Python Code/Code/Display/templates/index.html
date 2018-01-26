@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>网上舆情爬取系统</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/static/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/static/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/static/bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!---->
+    <link href="/static/mypackage/css/jquery.bdt.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">李林</a>
+
+            <form action="{{ url_for('set_url') }}" method="post"  class="navbar-form navbar-right setUrl row" role="search">
+                <div class="form-group col-md-10 padding-right-0">
+                    <input id="urlValue" name="url" type="text" class="form-control width-full" placeholder="http://www.cxjhm.com/forum-46-1.html" value="{{ url }}">
+                </div>
+                <div class="text-left col-md-2">
+                    <button id="setUrl" type="submit"  class="btn btn-default">设置</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- /.navbar-header -->
+
+
+        <!-- /.navbar-top-links -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse" id="mymenu">
+                <ul class="nav" id="side-menu">
+
+                    <li>
+                        <a href="#top" target="_self"><i class="fa fa-bar-chart-o fa-fw"></i> Data </a>
+                    </li>
+                    <li>
+                        <a href="#buttom" target="_self"><i class="fa fa-dashboard fa-fw"></i> Charts </a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Hot Words <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level" id="hot_words">
+                            {% for word in words %}
+                                <li>
+                                    <a href="http://127.0.0.1:5000/search/{{ word.word }}"
+                                       target="_self">{{ word.word }}</a>
+                                </li>
+                            {% endfor %}
+                            <li>
+                                <a href="javascript:;" onclick="add_word()" id="add_word"><strong>添加敏感词</strong></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" onclick="delete_word()" id="delete_word"
+                                   style="font-weight:bold; color:red">删除敏感词</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <!-- /.dropdown -->
+
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class='col-lg-9'>
+                <h1 class="page-header" style="font-family:Microsoft Yahei">
+                    网上舆情爬取系统
+                </h1>
+            </div>
+            <form action="/search" method="post">
+                <div class="input-group page-header col-lg-3">
+                    <input name="search_content" type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i>Data Show
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table border="0" class="table table-bordered" >
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>postMan</th>
+                                    <th>title</th>
+                                    <th>link</th>
+                                </tr>
+                            </thead>
+                            <!-- 只要渲染一下部分 -->
+                            <tbody id="myTable">
+                                {% for item in items %}
+                                        <tr>
+                                            <td id="getId">{{ loop.index }}</td>
+                                            <td>{{ item.postMan }}</td>
+                                            <td>{{ item.title }}</td>
+                                            <td><a href="http://127.0.0.1:5000/content.html/{{ item.id }}"
+                                                   target="_blank">文章链接</a></td>
+                                        </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <P>&nbsp;&nbsp;总共爬取了{{ count }}个帖子</P>
+                        <div class="col-md-12 text-right">
+                            <ul class="pagination" id="myPager"></ul>
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i>Chart by month
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div id="morris-area-chart"></div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<a name="buttom" id="buttom"></a>
+<!-- /#wrapper -->
+<!--Top-->
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- jQuery -->
+<script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="/static/mypackage/js/vendor/jquery.sortelements.js" type="text/javascript"></script>
+<script src="/static/mypackage/js/jquery.bdt.js" type="text/javascript"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/static/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="/static/bower_components/raphael/raphael-min.js"></script>
+<script src="/static/bower_components/morrisjs/morris.min.js"></script>
+
+<!--Powered by me-->
+<script type="text/javascript">
+    function getWord(obj) {
+        return "http://127.0.0.1:5000/search/" + (obj.innerText);
+    }
+</script>
+
+<!--Ajax动态刷新-->
+<!--添加热词-->
+<script>
+    function add_word() {
+        var word = prompt("添加你想要的敏感词~");
+        console.log(word);
+        $.ajax({
+                    method: "POST",
+                    url: "/add_word",
+                    data: {word: word},
+                    success: function () {
+                        /*
+                        var li = document.createElement('li');
+                        var a = document.createElement('a');
+                        a.textContent = word;
+                        li.appendChild(a);                              //构造li标签
+                        var menu = document.querySelector("#hot_words") //选择ul
+                        menu.insertBefore(li, menu.firstChild);         //添加
+                        */
+                        location.reload();
+                    }
+                }
+        );
+    }
+</script>
+<!--删除热词-->
+<script>
+    function delete_word() {
+        var word = prompt("请输入你想要删除的敏感词~");
+        var choice = window.confirm("你确定要删除么~")
+        if (choice == 1) {
+            $.ajax({
+                        method: "POST",
+                        url: "/delete_word",
+                        data: {word: word},
+                        success: function () {
+                            location.reload();
+                        }
+                    }
+            );
+        }
+    }
+</script>
+
+
+<script>
+    var data = {{ data }};
+    var chartData = [];
+    //加强版的for循环
+    for (var key in data) {
+        if(key<=5){
+            chartData.push({
+                month: '2016-'+key,
+                count: data[key]
+            })
+        }else{
+            chartData.push({
+                month: '2015-'+key,
+                count: data[key]
+            })
+        }
+
+        console.log(key)
+    }
+    Morris.Area({
+        element: 'morris-area-chart',
+        data: chartData,
+        xkey: 'month',
+        ykeys: ['count'],
+        labels: ['Count'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+    });
+
+</script>
+<!-- Custom Theme JavaScript -->
+<script src="/static/js/sb-admin-2.js"></script>
+
+<!-- 分页 -->
+<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.goup.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:10});
+    });
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript" src="/static/mypackage/js/pagination.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.goup({
+            trigger: 100,
+            bottomOffset: 100,
+            locationOffset: 100,
+            title: 'Top',
+            titleAsText: true
+        });
+    });
+</script>
+
+<!-- 清空数据库 -->
+<!--
+<script type="text/javascript">
+    function emptySql(){
+        var choice = window.confirm("你确定要清空数据库么~")
+        if (choice == 1) {
+            $.ajax({
+                        method: "POST",
+                        url: "/empty_sql",
+                        success: function () {
+                            parent.location.reload();
+                        }
+                    }
+            );
+        }
+    }
+</script>
+-->
+
+</body>
+
+
+</html>

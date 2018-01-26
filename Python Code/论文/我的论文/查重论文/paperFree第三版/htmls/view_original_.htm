@@ -1,0 +1,1811 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperFree最权威中文论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+<div class="zhengwen">
+
+
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统的设计与实现
+<br>
+  <br>
+<span style="margin-left:25px"></span> 摘  要
+<br>
+  <br>
+<span style="margin-left:25px"></span> 随着计算机技术的迅猛发展,网络已成为们对不同社会问题发表看法的重要场所,互联网已成为社会大众思想文化信息的集散地,网络舆情呈现了多样化的趋势。为了进行正确的舆论导向,网络舆情的监控势在必行,而爬取系统正是其中的重要的组成部分。本系统针对这一需求进行开发,使用了B/S架构,选用了python语言和MySQL数据库进行开发。网上舆情爬取系统总共包括两大模块:前台展示模块和后台爬取模块,其中前台展示模块包括四个部分:帖子展示、帖子搜索、敏感词管理和URL设置。后台爬取模块包括两个部分:爬取帖子和存储帖子。本系统具备一定的使用价值,能够稳定运行,帮助用户了解最新舆情,为网络舆情的监控奠定基础。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 该论文有图25幅,表2个,参考文献20篇。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 关键词:网上舆情爬取系统  舆情爬取系统  爬取系统
+<br>
+  <br>
+<span style="margin-left:25px"></span> Design and Implementation of Crawling Public Online Opinion System
+<br>
+  <br>
+<span style="margin-left:25px"></span> Abstract
+<br>
+  <br>
+<span style="margin-left:25px"></span> With the rapid development of computer science and technology, the network has become to express their views on various social issues important place, the Internet has become a distribution center for the community ideological and cultural information network public opinion presents a trend of diversification. For the correct guidance of public opinion, public opinion monitoring network is imperative, and the crawling system is the important part of it. The system for the needs of development, the use of B / S structure, use the python language and MySQL database development. Online public opinion crawling system comprises a total of two modules: the foreground and background display module crawling module, which shows the front desk module consists of four parts: the post display, post search for sensitive words and URL management settings. Background crawling module consists of two parts: the storage and crawling Posts Posts. This system has some value and considerable stable operation, to help users learn about the latest public opinion, to lay the foundation for the Internet public opinion monitoring.
+<br>
+  <br>
+<span style="margin-left:25px"></span> Key Words: Crawling Public Online Opinion System; Public opinion crawling system; Crawling System
+<br>
+  <br>
+<span style="margin-left:25px"></span> 目  录
+<br>
+  <br>
+<span style="margin-left:25px"></span> 摘要----------------------------------------------------------------------------------------------Ⅰ
+<br>
+  <br>
+<span style="margin-left:25px"></span> Abstract-----------------------------------------------------------------------------------------Ⅱ
+<br>
+  <br>
+<span style="margin-left:25px"></span> 目录----------------------------------------------------------------------------------------------Ⅲ
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图清单-------------------------------------------------------------------------------------------Ⅳ
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表清单-------------------------------------------------------------------------------------------Ⅳ
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1  绪论	6
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.1 课题背景及研究意义	7
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.2 开发工具的选择及语言介绍	7
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.3 本文的研究内容及贡献	9
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.4 本章小结	9
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2  需求分析	10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.1 功能需求	10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.2 性能需求	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.3 可行性分析	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.4本章小结	14
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3  系统总体功能模块设计	15
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.1 系统功能模块的划分	15
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.2 数据库设计	18
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.3 本章小结	19
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4  系统实现过程	20
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.1 浏览帖子子模块	20
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.2 敏感词管理子模块	22
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.3 帖子搜索子模块	25
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.4 URL设置子模块	26
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.5 系统后台子模块	28
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.6 本章小结	31
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5  关键技术	33
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.1系统开发模式	33
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.2页面布局DIV+CSS	33
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.3 jQuery和Ajax技术	34
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.4 scrapy框架	35
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.5 flask框架	35
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.6 SQLAlchemy	37
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.7 本章小结	38
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6  总结与展望	39
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6.1总结	39
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6.2展望	39
+<br>
+  <br>
+<span style="margin-left:25px"></span> 参考文献	41
+<br>
+  <br>
+<span style="margin-left:25px"></span> 致谢	43
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图清单
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图序号	图名称	页码
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-1	用户用例图	10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-2	管理员用例图	10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-3	网上舆情爬取系统搜索帖子业务	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-4	网上舆情爬取系统敏感词管理业务	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-5	网上舆情爬取系统设置爬取网上的业务	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-6	网上舆情爬取系统爬取业务	12
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-1	系统前台爬取功能模块	14
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-2	系统后台爬取功能模块	15
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-3	爬取帖子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 16
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-4	存储帖子管理	16
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-5	“帖子”属性描述图	17
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-6	“敏感词”属性描述图	17
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-1	帖子展示	19
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-2	内容展示	20
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-3	图表展示	21
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-4	敏感词管理	21
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-5	添加敏感词	22
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-6	添加敏感词成功	23
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-7	删除敏感词	23
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-8	删除成功	24
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-9	搜索帖子	25
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-10	设置URL之前	26
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-11	设置URL之后刷新的页面	26
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图5-1	B/S模式结构图	34
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图5-2	scrapy框架结构图	36
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表清单
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表序号	表名称	页码
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表3-1	网上舆情爬取系统帖子表	18
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表3-2	网上舆情爬取系统敏感词表	18
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1  绪论
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.1 课题背景及研究意义
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.1.1课题背景
+<br>
+  <br>
+<span style="margin-left:25px"></span> 随着计算机技术的应用和发展,网络作为信息的载体,已经越来越普及,网络已经成为公众参与社会生活的重要信息通道。因为互联网是开放的,每个人都有权利在互联网上面发表自己想要发表的信息,信息的内容涵盖了很多方面,小到日志心情,大到全国性活动。互联网拥有传统媒体无法匹敌的优势:方便性,虚拟性,互动性,多样性。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网络舆情的特点通常是形成迅速,消失迅速,更多的人选择发表对于日常生活中的一些问题的看法,意见,态度,情绪等,伴随着事件和变化的发展,网络已然成为社会热点的一个重要载体。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 随着网上舆情的深入发展,网上舆情呈现了多样化、复杂化的趋势,需要一定的舆情监控措施。为了更加方便的监控网络舆情,进行正确的舆论导向,网上舆情爬取系统的开发指日可待。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.1.2研究意义
+<br>
+  <br>
+<span style="margin-left:25px"></span> 随着网络技术的不断发展,微博、贴吧和论坛等社交工具发展迅猛,用户量越来越大,网络舆情时常出现一些错误的导向,为了监控舆情,使得网络舆情走上一个正确的轨道,爬取系统势在必行。同时该系统可以为爬取网络其他资源提供有效的示范作用,对于科学、合理的利用网络资源意义重大。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.2 开发工具的选择及语言介绍
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.2.1 Python简介
+<br>
+  <br>
+<span style="margin-left:25px"></span> Python[1]是一种解释性的程序设计语言,同时Python还具有面向对象的特征。它由吉多·范罗苏姆在1989年发明,Python的第一个版本在1991年发行。
+<br>
+  <br>
+<span style="margin-left:25px"></span> Python语法十分简洁清晰,强制用空白符(White Space)作为语句的缩进是Python最为显著的特点。
+<br>
+  <br>
+<span style="margin-left:25px"></span> Python有一个丰富而强大的库。人们经常称之为胶水语言,是因为Python能够很容易地与其它的语言(尤其是C/ C ++)的各种模块连接在一起。常见的应用场景是Python快速生成原型程序,程序中有一些特殊的需求,可以使用其他合适的语言进行改写,比如3D游戏以及3D电影的渲染,渲染模块对于性能要求是很高的,必须使用C或者C ++重写,然后打包成Python的扩展库,源程序就可以被调用该库了。需要注意的是该平台可能需要当您使用扩展库来考虑的一个问题,有些实现可能无法提供跨平台的功能。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.2.2 MySQL数据库简介
+<br>
+  <br>
+<span style="margin-left:25px"></span> MySQL[2]是一种关系型的数据库管理系统,并且在今天的数据库管理系统中,MySQL的影响力是最大的,MySQL的速度和健壮性是其优势的集中体现。它被称为关系型的数据库管理系统,是因为它将数据存放在分立的表格中,而不会将所有的数据不加分类叠加在一起。因此,这样很大程度上增加了灵活性,同时也提高了存储速度。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 与其他数据库相比,MySQL有很多更为先进的功能。其特点如下:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)性能
+<br>
+  <br>
+<span style="margin-left:25px"></span> 因为MySQL是没有线程创建开销,所以MySQL将在一些有以下几个方面的速度更快:
+<br>
+  <br>
+<span style="margin-left:25px"></span> ①INSERT TABLE和UPDATE TABLE。
+<br>
+  <br>
+<span style="margin-left:25px"></span> ②在不属于同一个索引的东西上进行SELECT操作。
+<br>
+  <br>
+<span style="margin-left:25px"></span> ③几个键插入列到一个简单的表格中去。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)磁盘空间效率
+<br>
+  <br>
+<span style="margin-left:25px"></span> MySQL的表在内存中占用很小。例如,MEDIUMINT只需要占用3个字节的长度。在大数据量的情况下,节省一个字节是很重要的。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)稳定性
+<br>
+  <br>
+<span style="margin-left:25px"></span> MySQL有很多优点:高便携性、较为快速的安装过程、紧凑等一系列优点,这使得中小网站通常将MySQL作为数据库。
+<br>
+  <br>
+<span style="margin-left:25px"></span> MySQL的可以支持多种操作系统,如:FreeBSD,Linux,MacOS,AIX和Windows,并为许多编程语言提供了应用开发程序接口。为了保证代码的可移植性,MySQL采用较为底层的语言(C/C++)进行编写。 MySQL不仅能够支持多线程,提升SQL的查询速度,同时还优化搜索算法。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.2.3 开发工具及运行环境
+<br>
+  <br>
+<span style="margin-left:25px"></span> 操作系统:Microsoft Windows 10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 开发环境:PyCharm[3]5.0.4,WampServer[4]2.5
+<br>
+  <br>
+<span style="margin-left:25px"></span> 数据库:MySQL 5.6.17
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.3 本文的研究内容及贡献
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本文主要介绍了网上舆情爬取系统的背景、意义、整体设计思路以及关键技术等。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统能够有效的爬取网络资源,首先选取了一个网站作为样例,通过scrapy框架爬取了帖子的相关信息(包括发帖人postMan、发帖时间firstTime,帖子标题title,帖子内容content,帖子链接link,阅读readCount和回复replyCount的数量),将爬取的信息存放至数据库。前台使用了Flask框架进行展示。用户可以直观的看到帖子的相关信息,可以通过图表来深入了解舆情动向,还可以通过搜索以及添加敏感词来查找自己感兴趣的舆论。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本文的章节内容安排如下:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第1章:绪论。主要详细描述了网上舆情爬取系统的背景、意义、开发语言、开发工具的选用和介绍,同时介绍了本文的主要贡献和研究内容。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第2章:需求分析。主要介绍了系统的性能需求和相关的功能需求。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第3章:系统功能模块设计。阐述了系统功能的模块的划分和数据库的设计与实现。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第4章:系统实现流程。介绍了系统各个功能模块,并且对模块的核心代码进行展示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第5章:关键技术。介绍了网上舆情爬取系统的核心技术以及配置。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 第6章:总结和展望。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1.4 本章小结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本系统主要介绍了系统的研究背景及意义、开发工具及语言和研究内容及主要贡献。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2  需求分析
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.1 功能需求
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.1.1前台展示模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1) 帖子展示
+<br>
+  <br>
+<span style="margin-left:25px"></span> 首次访问主页面,用户可以看到爬取论坛的帖子(本文以“结合美”论坛 http://www.cxjhm.com/forum.php为例),分页显示在主界面。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)图表展示
+<br>
+  <br>
+<span style="margin-left:25px"></span> 该模块使用折线图对爬取到的帖子进行展示,折线图按照月份进行分类。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3) 敏感词管理
+<br>
+  <br>
+<span style="margin-left:25px"></span> 用户可以添加自己感兴趣的敏感词,同时也可以删除不感兴趣的敏感词。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4)帖子搜索
+<br>
+  <br>
+<span style="margin-left:25px"></span> 用户可以根据自己的意向搜索感兴趣的帖子,同时也提供了搜索用户的功能。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5)URL设置
+<br>
+  <br>
+<span style="margin-left:25px"></span> 用户可以设置自己感兴趣的URL,重启程序,就可以根据输入的URL进行爬取。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.1.2 后台爬取模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)爬取帖子:该爬取模块主要是将结合美上的帖子爬取下来,提供了发帖人、发帖时间、发帖内容、帖子标题、阅读和回复数量等信息,同时利用scrapy框架循环爬取下一页帖子。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)存储帖子:按照适当的格式存储数据库,同时添加去重功能,防止相同的帖子存入数据库。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.1.3 用例模型
+<br>
+  <br>
+<span style="margin-left:25px"></span> (1)用例图(用户)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 用户用例图表述了一个用户的操作权限。用户可以进行帖子展示、帖子搜索、敏感词管理和URL设置,用户用例图如图2-1所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-1 用例图(用户)
+<br>
+  <br>
+<span style="margin-left:25px"></span> (2)用例图(管理员)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 管理员用例图表示了一个管理员的操作权限。管理员可以爬取帖子,存储帖子。管理员用例图如图2.2所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-2用例图(管理员)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.2 性能需求
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.2.1 系统的软件环境
+<br>
+  <br>
+<span style="margin-left:25px"></span> 	后台服务器。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)Windows 10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)python2.7.11
+<br>
+  <br>
+<span style="margin-left:25px"></span> 	客户端计算机。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)	Windows 10
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)	Chrome 49.0
+<br>
+  <br>
+<span style="margin-left:25px"></span> 	数据库服务器。
+<br>
+  <br>
+<span style="margin-left:25px"></span> MySQL+WampServer
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.2.2 系统硬件环境
+<br>
+  <br>
+<span style="margin-left:25px"></span> 计算机
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.2.3 系统的性能要求
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)磁盘容量要求:由于本爬取系统是基于B/S的架构,因此在存储容量方面,本网站所占用的内存容量很小,系统文件大概需要9M,数据库系统系统文件占用空间很有限。但是,本网上舆情爬取系统中的后台爬取模块需要一定内存空间,需要将一个论坛上某个板块所有的帖子全部爬取下来,会占用一定的内存空间。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)适应性要求:本系统要求功能模块清晰,功能明确。模块与模块之间耦合性弱,内聚性强,能够使用户在极短的时间内熟悉网上舆情爬取系统的整个操作流程,用户体验良好。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.3 可行性分析
+<br>
+  <br>
+<span style="margin-left:25px"></span> 可行性分析指的是在现有的组织环境下,分析一下该爬取系统的开发工作是否已经具备了必要的工作条件及资源。本爬取系统不仅是对于网上舆情的爬取,对于其他爬取系统类似于电影或者课后习题等网站的爬取具有很强的参加价值。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.3.1概述
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统的可行性研究是系统的设计与开发人员进行开发的前提条件和基础,可行性研究能够使开发人员在系统研发的初期敏感的发现系统在需求方面的不足,这样可以避免耗费大量财力,物力和人力等诸多困难。综上所述,可行性研究及分析在软件开发的整个软件开发过程的中有着举足轻重的地位。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.3.2 系统业务流程调查
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本系统的业务流程大致可以分为两部分。一个部分是搜索帖子。用户根据需求进行搜索。另一部分是添加敏感词,同样,用户可以根据需求添加敏感词。还有一部分是设置URL。系统业务流程如图2-3、2-4、2-5和2-6所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-3网上舆情爬取系统帖子搜索业务
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-4网上舆情爬取系统敏感词管理业务
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-5网上舆情爬取系统URL设置业务
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图2-6网上舆情爬取系统爬取业务
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.3.3 系统可行性调查
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)技术可行性:本系统主要采用B/S架构进行开发。这种架构具有较为良好的开放性、可扩展性和共享性,便与系统的开发和维护。此外,本系统采用目前最为流行的scrapy框架以及beautiful soup[5]技术,维护起来方便简单。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)经济的可行性:成本效益分析是经济可行性分析中最为重要的内容。如果开发一个系统在经济方面就不适用,则完全没有必要开发这个系统。此网上舆情爬取系统开发成本低廉,因此在经济方面完全可行。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2.4本章小结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本章主要介绍了该网站的需求,包括软硬件环境,系统的性能需求、功能需求以及可行性分析和调查。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3  系统总体功能模块设计
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.1 系统功能模块的划分
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统有四个模块:帖子展示、图表展示、搜索帖子、敏感词管理和URL设置。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.1.1系统功能模块结构图
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统前台展示功能模块和模块之间的关系如图3-1所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-1系统前台展示功能模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统后台的爬取功能模块和模块之间的关系如图3-2所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-2系统后台爬取功能模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.1.2系统的功能模块描述
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)爬取帖子
+<br>
+  <br>
+<span style="margin-left:25px"></span> 爬取帖子主要分为爬取帖子的发帖人、发帖时间、帖子标题、阅读和回复数量、帖子链接以及该帖子内容,同时该系统添加了循环抓取下一页的功能。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 爬取帖子模块图如图3-3所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-3爬取帖子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)存储帖子
+<br>
+  <br>
+<span style="margin-left:25px"></span> 存储帖子模块主要包括去除重复帖子和存储有效帖子两个功能。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 存储帖子功能图3-4所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-4存储帖子管理
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.2 数据库设计
+<br>
+  <br>
+<span style="margin-left:25px"></span> 在设计爬取系统时,数据库至关重要。数据库的稳定性、安全性和可恢复性在用户使用系统的过程中起着非常大的作用。因此,在进行系统研发时,选择合适的数据库极为重要。本系统采用的数据库是 MySQL5.6.17,当研发人员设计系统数据库之前,首先要对用户的需求以及将来可能会增加的数据需求进行充分的调查,并且有较为深入的思考。下面将介绍本系统的数据库结构以及主要的表(TABLE)。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.2.1  实体
+<br>
+  <br>
+<span style="margin-left:25px"></span> 数据库中的实体可以指的是人也可以指的是物。经分析,本爬取系统的实体主要有两类:帖子和敏感词。本网上舆情爬取系统的实体属性如图3-5和3-6所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-5“帖子”属性描述图
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图3-6“敏感词”属性描述图
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.2.2  关系模型
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本系统的关系模型如下:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)帖子表:(编号,发帖人,发帖时间,帖子标题,阅读和回复数量,帖子内容,帖子链接)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)敏感词表(编号,敏感词名称)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.2.3数据库中的主要表结构
+<br>
+  <br>
+<span style="margin-left:25px"></span> 根据本网站的需求,系统使用的表如表3-1和3-2所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表3-1网上舆情爬取系统帖子表(jihemei)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 列名	数据类型	类型长度	主键	允许空	默认值	说明
+<br>
+  <br>
+<span style="margin-left:25px"></span> id	int	11	是	   NO	Null	  编号
+<br>
+  <br>
+<span style="margin-left:25px"></span> postman	varchar	20		   NO	   Null	  发帖人
+<br>
+  <br>
+<span style="margin-left:25px"></span> firstTime	date			   NO	   Null	发帖时间
+<br>
+  <br>
+<span style="margin-left:25px"></span> Title	text			   NO	   Null	  标题
+<br>
+  <br>
+<span style="margin-left:25px"></span> Content	text			   Yes	   Null	内容
+<br>
+  <br>
+<span style="margin-left:25px"></span> readCount	int	11		   NO	0	阅读次数
+<br>
+  <br>
+<span style="margin-left:25px"></span> replyCount	int	11		   NO	   Null	回复次数
+<br>
+  <br>
+<span style="margin-left:25px"></span> Link	text			   NO	   Null	发帖链接
+<br>
+  <br>
+<span style="margin-left:25px"></span> 表3-2网上舆情爬取系统敏感词表(sensitive_words)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 列名	数据类型	类型长度	主键	允许空	默认值	说明
+<br>
+  <br>
+<span style="margin-left:25px"></span> id	int	11	是	NO	Null	编号
+<br>
+  <br>
+<span style="margin-left:25px"></span> word	varchar	20		NO	Null	敏感词名称
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3.3 本章小结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本章节阐述了系统的总体设计。通过对功能的描述,数据库的分析以及各模块功能主要完成的任务等进行分析,能够使用户对本网站有着初步的理解,便于用户对系统的阶段。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4  系统实现过程
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.1 浏览帖子子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 浏览帖子子模块分帖子展示和图表展示,这样可以从不同的维度展示爬取的帖子,以此来洞察舆情。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.1.1  帖子展示子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 浏览帖子子模块主要是将爬取的帖子用表格的形式展示在网页上,主要展示发帖人、发帖时间、帖子标题以及帖子的内容。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 帖子展示模块如图4-1和4-2所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-1帖子展示
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-2内容展示
+<br>
+  <br>
+<span style="margin-left:25px"></span> 帖子展示的代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^table border="0" class="table table-bordered" id="bootstrap-table"^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^tr^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^th^id^/th^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^th^postMan^/th^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^th^title^/th^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^th^link^/th^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/tr^
+<br>
+  <br>
+<span style="margin-left:25px"></span> {% for item in items %}
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^tr^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^td id="getId"^{{ loop.index }}^/td^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^td^{{ item.postMan }}^/td^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^td^{{ item.title }}^/td^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^td^^a href="http://127.0.0.1:5000/content.html/{{ item.id }}"target="_blank"^文章链接^/a^^/td^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/tr^
+<br>
+  <br>
+<span style="margin-left:25px"></span> {% endfor %}
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/table^
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.1.2  图表展示子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 在图表展示子模块中,照月份分类,统计出每个月份的帖子数量,使用折线图进行展示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图表展示如图4-3所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-3图表展示
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.2 敏感词管理子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 敏感词管理子模块主要包括两个子模块:添加敏感词子模块和除敏感词子模块。这样可以根据用户的喜好定制自己喜欢的敏感词,这样方便查询相关的信息。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 敏感词管理如图4-4所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-4敏感词管理
+<br>
+  <br>
+<span style="margin-left:25px"></span> 敏感词管理的代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^a href="#"^^i class="fa fa-sitemap fa-fw"^^/i^ Hot Words ^span class="fa arrow"^^/span^^/a^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^ul class="nav nav-second-level" id="hot_words"^
+<br>
+  <br>
+<span style="margin-left:25px"></span> {% for word in words %}
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^a href=http://127.0.0.1:5000/search/{{ word.word }} target="_self"^{{ word.word }}^/a^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> {% endfor %}
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^a href="javascript:;" onclick="add_word()" id="add_word"^^strong^添加敏感词^/strong^^/a^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^a href="javascript:;" onclick="delete_word()" id="delete_word" style="font-weight:bold; color:red"^删除敏感词^/a^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/ul^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^!-- /.nav-second-level --^
+<br>
+  <br>
+<span style="margin-left:25px"></span> ^/li^
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.2.1  添加敏感词子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 添加敏感词子模块采用提示框的方式让用户输入。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 添加敏感词如图4-5和4-6所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-5添加敏感词
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-6添加敏感词成功
+<br>
+  <br>
+<span style="margin-left:25px"></span> 添加敏感词的代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/add_word', methods=['POST', 'GET'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def Add_Word():
+<br>
+  <br>
+<span style="margin-left:25px"></span> word = request.form.get('word')
+<br>
+  <br>
+<span style="margin-left:25px"></span> db.addWord(word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> return jsonify(word=word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.2.2  删除敏感词子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 删除帖子子模块采用提示框的方式让用户输入
+<br>
+  <br>
+<span style="margin-left:25px"></span> 删除帖子如图4-7和4-8所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-7删除敏感词
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-8删除成功
+<br>
+  <br>
+<span style="margin-left:25px"></span> 删除敏感词的代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/delete_word', methods=['POST', 'GET'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def Delete_Word():
+<br>
+  <br>
+<span style="margin-left:25px"></span> word = request.form.get('word')
+<br>
+  <br>
+<span style="margin-left:25px"></span> db.deleteWord(word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> return jsonify(word=word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.3 帖子搜索子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 搜索帖子子模块放置在右上角,用户输入自己想查询的信息,后台会根据查询的信息搜索发帖人和帖子标题,将帖子展示在主页。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 搜索帖子如图4-9所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-9搜索帖子
+<br>
+  <br>
+<span style="margin-left:25px"></span> 搜索帖子的代码。
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/search/^word^', methods=['POST', 'GET'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def Search_Word(word):
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = db.searchTitle(word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = db.getWord()
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = None
+<br>
+  <br>
+<span style="margin-left:25px"></span> with open('E:\Python Code\Code\Crawler\URLs', 'r') as f:
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = f.readline()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return render_template('index.html',
+<br>
+  <br>
+<span style="margin-left:25px"></span> items=items,
+<br>
+  <br>
+<span style="margin-left:25px"></span> words=words,
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = URL,
+<br>
+  <br>
+<span style="margin-left:25px"></span> data=str(db.getCount_byMonth_byContent(word)))
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.4 URL设置子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL设置子模块	是让用户输入自己想爬取的URL(在http://www.cxjhm.com/域名之下),后台获取到URL之后,清空一下数据库,重新开始爬取用户输入的网页,刷新一下页面就可以获取到新爬取的数据。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 设置URL模块如图4-10和4-11所示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-10设置URL之前
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图4-11设置URL之后刷新的页面
+<br>
+  <br>
+<span style="margin-left:25px"></span> 设置URL的代码如下。
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/set_URL', methods=['POST'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def set_URL():
+<br>
+  <br>
+<span style="margin-left:25px"></span> data = request.form
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = data.get('URL', None)
+<br>
+  <br>
+<span style="margin-left:25px"></span> if URL is None:
+<br>
+  <br>
+<span style="margin-left:25px"></span> flash('URL为空', 'danger')
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 写入文件
+<br>
+  <br>
+<span style="margin-left:25px"></span> with open('E:\Python Code\Code\Crawler\URLs', 'w') as f:
+<br>
+  <br>
+<span style="margin-left:25px"></span> f.write(URL)
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = db.getItem()
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = db.getWord()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return render_template(
+<br>
+  <br>
+<span style="margin-left:25px"></span> 'index.html',
+<br>
+  <br>
+<span style="margin-left:25px"></span> items=items,
+<br>
+  <br>
+<span style="margin-left:25px"></span> words=words,
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = URL,
+<br>
+  <br>
+<span style="margin-left:25px"></span> data=str(db.getCount_byMonth())
+<br>
+  <br>
+<span style="margin-left:25px"></span> )
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.5 系统后台子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 系统后台子模块主要是爬取帖子和存储帖子。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.5.1 爬取帖子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 首先是爬取的代码:(jihemei_spider.py)主要分三个小模块:设置URL、爬取帖子相关信息、爬取下一页。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)URL设置的功能函数,代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> def __init__(self):				#设置URL函数
+<br>
+  <br>
+<span style="margin-left:25px"></span> # self.start_URLs.append(URL)
+<br>
+  <br>
+<span style="margin-left:25px"></span> with open("E:\Python Code\Code\Crawler\URLs", "r") as f:
+<br>
+  <br>
+<span style="margin-left:25px"></span> self.start_URLs.append(f.readline())
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)爬取下一页功能函数,代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> for href in response.css("#fd_page_bottom a::attr('href')"):  # 抓取button所有的链接
+<br>
+  <br>
+<span style="margin-left:25px"></span> URL = response.URLjoin(href.extract())  # 加入队列
+<br>
+  <br>
+<span style="margin-left:25px"></span> m = re.search(r'www\.cxjhm\.com/forum\-\d+\-(\d+)\.html', URL)
+<br>
+  <br>
+<span style="margin-left:25px"></span> page = m.group(1)
+<br>
+  <br>
+<span style="margin-left:25px"></span> if int(page) ^= 10:  # page是字符串,装换为int
+<br>
+  <br>
+<span style="margin-left:25px"></span> yield scrapy.Request(URL, callback=self.parse)  # 再次调用该函数
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)爬取帖子的功能函数(核心函数),代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> def parse(self, response):
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 首先选择大范围
+<br>
+  <br>
+<span style="margin-left:25px"></span> sel = Selector(response)
+<br>
+  <br>
+<span style="margin-left:25px"></span> sites = sel.css('.bm_c tr')
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 循环逐个获取每个标签下的数据
+<br>
+  <br>
+<span style="margin-left:25px"></span> for site in sites:
+<br>
+  <br>
+<span style="margin-left:25px"></span> #新建PostItem类
+<br>
+  <br>
+<span style="margin-left:25px"></span> item = PostItem()
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['title'] = site.css('.s.xst::text').extract_first()  # 取出其中的文本,取出第一个
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['postMan'] = site.css('cite a::text').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 先选择第一个by,防止第二个by干扰。
+<br>
+  <br>
+<span style="margin-left:25px"></span> cols = site.css('.by')
+<br>
+  <br>
+<span style="margin-left:25px"></span> col = cols[0]
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 专门处理时间
+<br>
+  <br>
+<span style="margin-left:25px"></span> print '---------------------',col is None
+<br>
+  <br>
+<span style="margin-left:25px"></span> if col != None:
+<br>
+  <br>
+<span style="margin-left:25px"></span> time = col.css('em span::text').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> if time != None:
+<br>
+  <br>
+<span style="margin-left:25px"></span> time_utf8 = time.encode("utf-8")
+<br>
+  <br>
+<span style="margin-left:25px"></span> if time_utf8.find("天") != -1:
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['firstTime'] = col.css('em span::attr(title)').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> elif time_utf8.find("小时") != -1:
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['firstTime'] = col.css('em span::attr(title)').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> elif time_utf8.find("分钟") != -1:
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['firstTime'] = col.css('em span::attr(title)').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> else:
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['firstTime'] = col.css('em span::text').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['replyCount'] = site.css('.xi2::text').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['readCount'] = site.css('.num em::text').extract_first()
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['link'] = site.css('.s.xst::attr(href)').extract_first()  # 选择href
+<br>
+  <br>
+<span style="margin-left:25px"></span> # 针对该链接爬取content
+<br>
+  <br>
+<span style="margin-left:25px"></span> if item['link']:
+<br>
+  <br>
+<span style="margin-left:25px"></span> link = "http://www.cxjhm.com/" + item['link']
+<br>
+  <br>
+<span style="margin-left:25px"></span> html = get_content(link, my_headers)
+<br>
+  <br>
+<span style="margin-left:25px"></span> soup = BeautifulSoup(html)
+<br>
+  <br>
+<span style="margin-left:25px"></span> content = soup.find(attrs={'class': 't_f'}).get_text()  # 仅需要文本
+<br>
+  <br>
+<span style="margin-left:25px"></span> # content.replace(" ","&nbsp;")
+<br>
+  <br>
+<span style="margin-left:25px"></span> # content = content.replace("\n","^br/^")
+<br>
+  <br>
+<span style="margin-left:25px"></span> # content = '^pre^'+content+'^/pre^'
+<br>
+  <br>
+<span style="margin-left:25px"></span> item['content'] = content
+<br>
+  <br>
+<span style="margin-left:25px"></span> #返回
+<br>
+  <br>
+<span style="margin-left:25px"></span> yield item
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.5.2 存储帖子模块
+<br>
+  <br>
+<span style="margin-left:25px"></span> 存储帖子模块的代码如下所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> Base = declarative_base()
+<br>
+  <br>
+<span style="margin-left:25px"></span> #初始化数据库连接       防止中文乱码
+<br>
+  <br>
+<span style="margin-left:25px"></span> engine = create_engine('mysql://root:1234@localhost/spider?charset=utf8', echo=True)
+<br>
+  <br>
+<span style="margin-left:25px"></span> #pipeline对象
+<br>
+  <br>
+<span style="margin-left:25px"></span> class CrawlerPipeline(object):
+<br>
+  <br>
+<span style="margin-left:25px"></span> def process_item(self, item, spider):
+<br>
+  <br>
+<span style="margin-left:25px"></span> #创建Session类型
+<br>
+  <br>
+<span style="margin-left:25px"></span> DBSession = sessionmaker(bind=engine)
+<br>
+  <br>
+<span style="margin-left:25px"></span> #创建session对象
+<br>
+  <br>
+<span style="margin-left:25px"></span> session = DBSession()
+<br>
+  <br>
+<span style="margin-left:25px"></span> #从item中获取帖子的属性,创建Post对象。
+<br>
+  <br>
+<span style="margin-left:25px"></span> admin = Post(postMan = item['postMan'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> firstTime = item['firstTime'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> title = item['title'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> content = item['content'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> readCount = item['readCount'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> replyCount = item['replyCount'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> link = item['link'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> #去掉重复
+<br>
+  <br>
+<span style="margin-left:25px"></span> flag = 0                                    #标记flag,初始值为0,找到相同的帖子置1。
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = session.query(Post).all()                #query方法需要加Post
+<br>
+  <br>
+<span style="margin-left:25px"></span> for item in items:                            #在已经存在的数据库里面查找当前帖子。
+<br>
+  <br>
+<span style="margin-left:25px"></span> if item.link == admin.link:
+<br>
+  <br>
+<span style="margin-left:25px"></span> flag = 1
+<br>
+  <br>
+<span style="margin-left:25px"></span> #判断重复
+<br>
+  <br>
+<span style="margin-left:25px"></span> if flag==0:
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.add(admin)                       #加入数据库
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.commit()
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.close()                          #提交并关闭session对象
+<br>
+  <br>
+<span style="margin-left:25px"></span> #返回
+<br>
+  <br>
+<span style="margin-left:25px"></span> return item
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4.6 本章小结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本章详对各个功能模块进行了较为详细的分析。同时对系统的操作过程进行了深入浅出的讲解,能让用户对本系统有深入的理解,便于用户熟练操作此系统。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5  关键技术
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.1系统开发模式
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网络程序的开发模式有两种:B/S[6] 和C/S的[7],也被称为浏览器/服务器和客户机/服务器模式,两种模式对于不同的场合,应用是截然不同的。本系统采用的就是B/S开发模式。
+<br>
+  <br>
+<span style="margin-left:25px"></span> B/S模式是一种具有三层结构的技术系统:第一层,客户机和在整个系统参与者角色的用户界面之间。浏览器将与HTML[8]页面的代码进行交互,并且可以允许用户在输入信息的应用形式的网页被发送到后台;在第二层中,将启动级联的Web服务器来处理用户请求,将生成的HTML代码。第三层时,MySQL负责协调颁发WEB管理数据库SQL请求。B/S架构的结构图如图5-1所示:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图5-1 B/S架构结构图
+<br>
+  <br>
+<span style="margin-left:25px"></span> B/S模式的优势主要有:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)开发简单,交互性、共享性强。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)能随时进行浏览、查询等操作。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)提供了更为安全、便捷的存取模式。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4)维护简单,维护成本低。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5)能够降低网络通信量
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6)和C/S相对比, B/S模式速度更快。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 综上所述,本网上舆情爬取系统采用B/S模式设计实现。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.2页面布局DIV+CSS
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本系统采用了DIV+CSS[9]进行页面布局。
+<br>
+  <br>
+<span style="margin-left:25px"></span> DIV+CSS是“Web标准”最为常用的专业术语之一。CSS[10](层叠样式表)是层叠样式表的缩写,这是一种风格的语言如HTML文件。通俗来讲,DIV是用来建立网站结构和CSS来创建网站的性能(包括风格,美化等),很容易使HTML代码更简洁,同时也为日后的维护的网站。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 使用DIV+CSS布局的优势主要体现在内容和形式相分离,减少了页面的代码,页面布局的控制更加灵活,不仅提高了系统的易用性,系统的可维护行和系统的可扩展性,大大降低成本的网站。
+<br>
+  <br>
+<span style="margin-left:25px"></span> DIV+CSS的优点(优势)主要体现在以下几个方面:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)代码简洁易懂,提升了Web的浏览速度。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)形式和内容相分离。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)能很大程度上提高搜索引擎的搜索效率
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4)易于维护
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.3 jQuery和Ajax技术
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.3.1 jQuery技术
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本爬取系统网站使用了jQuery[11]技术,jQuery是一个优秀的JavaScript库。jQuery的文档非常的齐全,提供了许多优美的插件,采用代码和内容相分离来设计网页。它的出现一定程度上解放了系统的开发者,提供了完美的用户体验工作。
+<br>
+  <br>
+<span style="margin-left:25px"></span> jQuery具有的重要特性如下:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)改进了Ajax,引入很多JSON[12]和Ajax[13]处理方面的更新。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)更易于设置函数,为所有的对象新增很多易用的设置函数。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)重写了大部分函数,函数的性能有了较大幅度的提升。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.3.2Ajax技术
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本爬取系统网站在发展过程中还采用了Ajax技术,Ajax的英文缩写为Asynchronous JavaScript+XML[14],该技术給用于提供了更为自然的体验,并且能够实现用户服务器的异步通信功能,从而可以无尽的自由请求/响应。 Ajax不仅仅是一种技术。他集成了多种技术。Ajax包含的技术如下:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)使用XMLHttpRequest对象进行异步数据搜索。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)使用XHTML的标准和CSS的标准。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)使用XML和XLST的数据操作和交换。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4)使用DOM对象进行交互和动态显示。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5)将他们绑定在的Javascript[15]上。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.4 scrapy框架
+<br>
+  <br>
+<span style="margin-left:25px"></span> Scrapy[16]框架是用来抓取网站的数据,提取结构化数据的应用框架。可应用于包括数据挖掘,信息检索及处理和历史数据的存储等一系列程序。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 所谓的网络爬虫,或在互联网上其他地方是一个方向性的数据采集过程中,当然,这种说法当然不是很专业,更专业介绍,按照特定的要求抓取HTML页面。首先定义一个爬取的起始URL,也就是start_urls(元组),那么一般是这个网页内部会有很多URL,通过这些URL会连接到很多其他页面,所以他从当前页面的URL开始爬取,便可以获取这些爬虫抓取队列,然后进入一个新的页面,然后递归上面的操作,其实只是说的深度还是广度遍历遍历相同。
+<br>
+  <br>
+<span style="margin-left:25px"></span> Scrapy使用异步网络库Twisted来处理通信网络,框架清晰,并拥有很多种中间件接口,可以灵活地完成各种需求。scrapy框架结构图5-2如下。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 图5-2 scrapy框架结构图
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.5 flask框架
+<br>
+  <br>
+<span style="margin-left:25px"></span> Flask[17]是一个微型的Python的Web开发框架。尽管Flask框架是一个极为轻量级的框架,但是其功能不容小觑。毕竟,微架构的真正含义是短小而精悍。Flask依赖于两个外部库:WERKZEUG WSGI[19]工具集和Jinja2[18]模板引擎。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 前台系统配置在display.py里,代码如下。
+<br>
+  <br>
+<span style="margin-left:25px"></span> app = Flask(__name__)
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/')         #根路径
+<br>
+  <br>
+<span style="margin-left:25px"></span> def hello_world():
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = db.getItem()
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = db.getWord()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return render_template('index.html',
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = items,
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = words,
+<br>
+  <br>
+<span style="margin-left:25px"></span> data = str(db.getCount_byMonth()))
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/search', methods=['POST'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def Search():
+<br>
+  <br>
+<span style="margin-left:25px"></span> content = request.form['search_content']
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = db.searchTitle(content)
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = db.getWord()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return render_template('index.html',
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = items,
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = words,
+<br>
+  <br>
+<span style="margin-left:25px"></span> data = str(db.getCount_byMonth_byContent(content)))
+<br>
+  <br>
+<span style="margin-left:25px"></span> @app.route('/search/^word^', methods=['POST','GET'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> def Search_Word(word):
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = db.searchTitle(word)
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = db.getWord()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return render_template('index.html',
+<br>
+  <br>
+<span style="margin-left:25px"></span> items = items,
+<br>
+  <br>
+<span style="margin-left:25px"></span> words = words,
+<br>
+  <br>
+<span style="margin-left:25px"></span> data = str(db.getCount_byMonth_byContent(word)))
+<br>
+  <br>
+<span style="margin-left:25px"></span> if __name__ == '__main__':
+<br>
+  <br>
+<span style="margin-left:25px"></span> app.run(debug=True)
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.6 SQLAlchemy
+<br>
+  <br>
+<span style="margin-left:25px"></span> SQLAlchemy的[20]是Python语言的一个开放源代码的软件。SQLAlchemy提供了SQL工具包和对象关系映射(ORM)工具,SQLAlchemy的发行使用了MIT的许可证。
+<br>
+  <br>
+<span style="margin-left:25px"></span> SQLAlchemy采用语法简单的Python语言,它是为高效和高性能的数据库访问而设计的,实现了较为完整的企业级持久性模型。
+<br>
+  <br>
+<span style="margin-left:25px"></span> SQLAlchemy的代码如下。
+<br>
+  <br>
+<span style="margin-left:25px"></span> def process_item(self, item, spider):
+<br>
+  <br>
+<span style="margin-left:25px"></span> Base = declarative_base()
+<br>
+  <br>
+<span style="margin-left:25px"></span> #初始化数据库连接       防止中文乱码
+<br>
+  <br>
+<span style="margin-left:25px"></span> engine = create_engine('mysql://root:1234@localhost/spider?charset=utf8', echo=True)
+<br>
+  <br>
+<span style="margin-left:25px"></span> #创建Session类型
+<br>
+  <br>
+<span style="margin-left:25px"></span> DBSession = sessionmaker(bind=engine)
+<br>
+  <br>
+<span style="margin-left:25px"></span> #创建session对象
+<br>
+  <br>
+<span style="margin-left:25px"></span> session = DBSession()
+<br>
+  <br>
+<span style="margin-left:25px"></span> admin = Post(postMan = item['postMan'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> firstTime = item['firstTime'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> title = item['title'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> content = item['content'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> readCount = item['readCount'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> replyCount = item['replyCount'],
+<br>
+  <br>
+<span style="margin-left:25px"></span> link = item['link'])
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.add(admin)
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.commit()
+<br>
+  <br>
+<span style="margin-left:25px"></span> session.close()
+<br>
+  <br>
+<span style="margin-left:25px"></span> return item
+<br>
+  <br>
+<span style="margin-left:25px"></span> 5.7 本章小结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本章节重点介绍了本系统使用的核心技术,分别为B/S模式、DIV+CSS、jQuiry+Ajax、scrapy框架、flask框架和SQLAlchemy软件,同时也对系统使用技术的概念和应用做了详细的说明,以便更好地理解与运用本系统。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6  总结与展望
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6.1总结
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统已全部完成。该系统后台采用了scrapy框架和beautiful soup技术,前端采用了html、css、javascript技术和flask框架。开发工具选用了PyCharm。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 网上舆情爬取系统网站由前台和后台两个部分组成。前台主要提供了帖子查询,图表展示,详细内容展示,敏感词管理和搜索功能。在前台方面,我自学了一些前端技术,严格按照Web标准设计页面。采用div+css进行页面设计,不仅能加快网页的访问速度,还能提高网页的兼容性。同时,本系统采用jQuery和Ajax技术使得设计的网页更加美观、清晰。系统的后台部分,主要实现的功能是爬取帖子,存储帖子,其中爬取帖子我是用了scrapy框架和beautiful soup技术,存储帖子我使用了sqlalchemy工具,使得存储数据库的过程很方便。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 通过本次的课题设计,我感受到了系统开发是个较为复杂的过程。本次设计极大的提高了我的动手能力和逻辑思维能力,这次开发经历让我不仅学会使用Python语言,还让我领略到数据库设计对于系统开发的重大意义。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本系统的特色工作有:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)系统操作简单,功能模块清晰。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)前台展示多角度,前台展示不仅有数据展示,同时也有图表展示,还有敏感词管理和搜索功能,从各个角度展示爬取的帖子。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)技术上借助scrapy和flask开发框架,便于日后系统的维护、更新以及功能上的扩展。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 4)系统前台界面风格统一、清晰、美观、易用。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 6.2展望
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本课题虽然达到了预期的效果,但是随着网上舆情越来越复杂,本系统在某些些方面仍有待改善。主要有几下三个问题:
+<br>
+  <br>
+<span style="margin-left:25px"></span> 1)个性化:该程序将URL固定,如果用户希望爬取自己想爬取的模块,需要修改后台代码,需要添加一个功能让用户输入自己想爬取的网址,启动程序爬取网站即可。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 2)网上舆情爬取系统网站的安全性:本系统的数据库安全性需要进一步加强,因此,可以采取一些必要的加密手段,比如通过MD5算法或者sha1算法进行加密。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 3)网站的交互性:该网站未提供登陆和注册功能,缺少一些人性化的推送。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 参考文献
+<br>
+  <br>
+<span style="margin-left:25px"></span> [1]Magnus Lie Hetlang(挪).Python基础教程[M].北京:人民邮电出版社,2010,9-19.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [2]贝尔(美).深入理解MySQL[M].北京:人民邮电出版社,2010,50-85.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [3]Zheng Cirino(美). Pycharm. 中国国际图书贸易集团公司. 2005,66-68
+<br>
+  <br>
+<span style="margin-left:25px"></span> [4]何富贵 JSP开发案例教程[M]. 北京,机械工业出版社,2013.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [5]亓晓静 计算机应用与软件技术专业:基于C/S架构的软件项目实训[M] 北京,电子工业出版社, 2010,13-17
+<br>
+  <br>
+<span style="margin-left:25px"></span> [6]白勇.用B/S模式构建学校管理信息系统[J].重庆电力高等专科学校学报,1999(03):66-69..
+<br>
+  <br>
+<span style="margin-left:25px"></span> [7]Tsui,Frank F. Python P em dash a research processor in josephson technology[C]. IBM Journal of Research and Development,Vol34, No2,1140:222-235.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [8]Tsui,Frank F. Python em dash a research processor in josephson technology[C]. IBM Journal of Research and Development,Vol44, No2,1980:243-252.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [9]Bear(美), Bibeault,Yehuda Katz.jQuery实战[M].人民邮电出版社,2010,24-46.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [10]帕里(美) Ajax Hacks[M]. 电子工业出版社,2014,5-8.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [11]廖雪峰. JSON 入门指南[M]. 电子工业出版社. 2008,60-66
+<br>
+  <br>
+<span style="margin-left:25px"></span> [12]亨特(美) XML入门经典(第4版)[M]. 清华大学出版社. 2009, 10-15
+<br>
+  <br>
+<span style="margin-left:25px"></span> [13]弗拉纳根(美) javascript权威指南[M]. 机械工业出版社. 2007,5-10
+<br>
+  <br>
+<span style="margin-left:25px"></span> [14]Romanoff(美) Scrapy入门教程[J]. 人民邮电出版社. 2009,20-32
+<br>
+  <br>
+<span style="margin-left:25px"></span> [15]Miguel Grinberg. flask web development. O'Reilly Media.2014,20-25
+<br>
+  <br>
+<span style="margin-left:25px"></span> [16]Miguel Grinberg. flask web development. O'Reilly Media.2014,67-75
+<br>
+  <br>
+<span style="margin-left:25px"></span> [17]Miguel Grinberg. flask web development. O'Reilly Media.2014,144-147
+<br>
+  <br>
+<span style="margin-left:25px"></span> [18] Kong Michael. An environment for secure SQLAlchemy [M].Oxford University Press Inc, 1993: 149.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [19] Zhang, L. and W. Zhang. Implement of e-government system with data persistence of beautiful soup[M].. Hong Kong,2010:66-76.
+<br>
+  <br>
+<span style="margin-left:25px"></span> [20]Mark Ramm(美). SQLAlchemy,Addison-Wesley Professional. 2010,55-66
+<br>
+  <br>
+<span style="margin-left:25px"></span> 致谢
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本网上舆情爬取的开发和实现均在董永权老师的悉心指导下完成,特别是在本系统实现的过程中,董永权老师对我的系统整体框架和功能提出了许多宝贵的意见,并且指出了本次实现过程的难点,让我不再惧怕困难,努力完成。他的严谨的治学态度和对于学生的悉心指导,都让我对完成本系统更为有信心。在系统即将结束时,董老师仍不忘悉心指导我,对整个系统的完善提出了很多建设性的意见,并且对于以后系统开发提出了很多宝贵的意见。在此,我要向董永权导师致以最诚挚的谢意。董永权导师对于计算机事业的追求和热爱,使我引发了真挚的思考和无穷的启发。在此,我要向董永权老师真诚地感谢。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 感谢江苏师范大学智慧教育学院(计算机科学与技术学院),给了我本科四年的成长和学习专业知识平台,为我提供了良好的学习环境和学习氛围。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 感谢我同窗思念的同学,在我遇到困难和遭到挫折的时候,给予了我莫大的鼓励和关怀。
+<br>
+  <br>
+<span style="margin-left:25px"></span> 本网上舆情爬取系统一定有很多的不足,恳请各位老师指正。
+<br>
+</div>
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.PaperFree.cn" target="_blank">PaperFree</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2015 PaperFree
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>

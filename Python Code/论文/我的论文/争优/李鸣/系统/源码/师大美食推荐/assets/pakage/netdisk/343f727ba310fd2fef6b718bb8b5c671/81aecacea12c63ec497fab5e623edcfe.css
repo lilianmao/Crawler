@@ -1,0 +1,165 @@
+/* 通用 */
+ .abox               { cursor:pointer; border:0px; }  				/* 链接box */	
+ .abox-active        { cursor:pointer; border:1px solid #B9C5D5 ; 
+ 		       filter:alpha( opacity=70 ); opacity:0.7; 
+		      }
+ .idModule11,.idModule16 { width:100%; }	
+ .imgbox http://m.liming9309.quickapp.cn/22/1100013372/app/    { }								/* 有无图片显示控制,需要装入imgbox.js */
+ .opendialog http://m.liming9309.quickapp.cn/22/1100013372/app/{ }								/* 子页控制, 装入OpenDialog.default.css OpenDialog.Call.js */
+ .cutauchor  { } 								/* box 链接 属性 由 hert 定链接   */	
+ .cannot     { }								/* 控制a或onclick点击音  */ 
+/* end通用 */ 
+
+
+	
+/* 框架 */ 
+   /* 内容区显示 */
+   .temp-wrapper 	  {  width:100%; margin-top:50px;   } 	
+   .temp-scroller 	  {  width:100%; padding-bottom: 160px; }		                 /*底部设定时加50以上 */
+  
+   .temp-loading	  {  width:40px; height:40px; top:50%; left:50%; margin-left:-10px;      /*  加载时显示 */
+		             background:url(/mnt/sdcard/bbaaabddhc/netdisk/7d71f3e1f19d393e0ba32cc45830ce36/aebe95b0d7790c4124008eb78c4aa26e.gif); background-size:40px; } 
+ 
+   /*  下拉刷新显示 */
+   .temp-update      {  width:100%;height:48px;background:#000;display:none; top:48px;}   
+   .temp-update div  {  width:180px; height:48px;margin:0 auto;}
+   .temp-update span {  width:48px;height:48px;
+		        background:url(/mnt/sdcard/bbaaabddhc/netdisk/7d71f3e1f19d393e0ba32cc45830ce36/cb14d88d7b21fdf2d99c60a97dafd727.png) no-repeat 0 -0px; float:left; background-size:48px;}
+   .temp-update p    {  line-height:48px; padding-left:10px; color:#FFF; float:left;}
+
+   /*  更新中提示 */
+   .temp-autoupdate     {  display:none; width:100%; top:50px;  height:30px; line-heigth: 30px; 		      
+                           border:1px solid #DEDEDE ; background-color:#EFEFEF;  
+                           text-align:center; vertical-align:middle; }
+   .temp-autoupdate div {  width:150px; height:30px; margin:0 auto;  }
+   .temp-autoupdate span{  height:20px; width:20px; float:left; margin-top:4px; 
+                           background:url(/mnt/sdcard/bbaaabddhc/netdisk/7d71f3e1f19d393e0ba32cc45830ce36/aebe95b0d7790c4124008eb78c4aa26e.gif); background-size:20px 20px; }
+   .temp-autoupdate p   {  line-height:30px; padding-left:10px; float:left; color:#555; font-size:14px; font-weight:600; } 
+
+
+   /* 头部和栏目 */ 
+   .temp-header{ background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/7f75940eeb9bde71ee71d98a068df0a7.png ); 
+	      	 height:50px;line-height: 50px;vertical-align:middle;text-align:center;background-size:100% 100px;  }
+
+  
+  .temp-title  { margin:0 70px;font-size: 15px; color:#fff; font-weight: bold; 					      /* title 文字显示样式 */
+		 text-shadow:0 -1px 0 rgba(0,0,0,0.5);  
+		 word-break:keep-all; white-space:nowrap; overflow:hidden; text-overflow:ellipsis ; }  
+
+  .temp-return { background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/7f75940eeb9bde71ee71d98a068df0a7.png) no-repeat 0 -61px ;          /* 返回 */
+		 width:72px; height:30px;top:10px;left:0px; background-size:320px 100px; }
+
+  .temp-renovation{ background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/7f75940eeb9bde71ee71d98a068df0a7.png) no-repeat -74px -61px ;    /* 刷新 */
+	            width:60px;height:30px;right:0px;top:10px;background-size:320px 100px;
+		  }
+   /* 底部和栏目 */ 
+   .temp-footer	  { height:50px; width:100%; } 
+   .temp-footer * { text-align: center; margin-left:auto; margin-right:auto;  }
+   .footer-bg-pic { background:url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/3bd07b98fc75d03bc8d702d5b348de9f.png) ; }
+   .footer-bg-div { background-size: 100% 130px; HEIGHT: 100%; widht: 100%  } 
+ 
+   .footer-m1   { width:30px; height:24px;   background-position:  -26px  -56px;  margin-top:7px;background-size:320px 100px; }
+   .footer-m2   { width:30px; height:24px;   background-position: -103px  -56px;  margin-top:7px;background-size:320px 100px;   }
+   .footer-m3   { width:30px; height:24px;   background-position: -182px  -56px;  margin-top:7px;background-size:320px 100px; }
+   .footer-m4   { width:30px; height:24px;   background-position: -265px  -56px;  margin-top:7px;background-size:320px 100px;  } 
+   .footer-text { color:#fff; font-size:12px; font-weight:550; }      
+/* end框架 */
+
+
+/* 在线客服 */
+.service-icon  { height: 52px; width: 52px; background: url(/mnt/sdcard/bbaaabddhc/netdisk/1aa94eef3e40dc2b2344d65e26b8b138/dd84a590ce97c5cc866f70b292e05f95.png) 0px -533px; } 
+.service-func  { width: 137px; overflow:hidden; float: left; position: absolute; top:-190px; }
+.service-top   {  width:137px; height:10px; background-position: 0   -6px ; }
+.service-bottom{  width:137px; height:10px; background-position: 0 -430px ; }
+.service-chat  {  width:137px; height:45px; background-position: 0 -15px ;  display: none; }
+.service-phone {  width:137px; height:45px; background-position: 0 -60px ;  }
+.service-sms   {  width:137px; height:45px; background-position: 0 -106px ; }
+.service-msg   {  width:137px; height:45px; background-position: 0 -151px ; }
+.service-qq    {  width:137px; height:45px; background-position: 0 -197px ; }
+.service-email {  width:137px; height:45px; background-position: 0 -242px ; }
+.service-code  {  width:137px; height:45px; background-position: 0 -286px ; }
+.service-map   {  width:137px; height:45px; background-position: 0 -331px ; }
+.service-download   {  width:137px; height:45px; background-position: 0 -377px ; }
+/* end在线客服 */
+
+
+
+/* 购物车商品数*/
+.service-cart          {  width:31px; height:31px; background-position: -5px -492px ;    
+                          filter:alpha( opacity=80 ); opacity:0.8; margin:0px auto; 
+                          position:absolute; z-index:100; right:5px; bottom:70px;   }
+.service-cart-number   {  display:none;-webkit-text-size-adjust:none; position:relative; top:-8px; left:-3px;
+                          font-size:10px; font-weight:bolder;text-align:center; width:24px;height:24px; 
+                          vertical-align:middle;line-height:24px; color:#ffffff;  
+                          background: url(/mnt/sdcard/bbaaabddhc/netdisk/3c7de7ea0e7c715a49132623d1eb97ea/553a27a4c3dcdf102879787a6a563244.png);
+                          background-position: -106px -543px;      
+                          line-height:24px;    }
+/* end购物车商品数*/
+/* 订单消息数 */
+.service-order          {  width:31px; height:31px; background-position: -5px -492px ;  
+                          filter:alpha( opacity=80 ); opacity:0.8; margin:0px auto; display:none;
+                          position:absolute; z-index:100; right:5px; bottom:70px;  }
+.service-order-number   { display:none;-webkit-text-size-adjust:none; position:relative; top:-8px; left:-3px;
+                          font-size:10px; font-weight:bolder;text-align:center; width:24px;height:24px; 
+                          vertical-align:middle;line-height:24px; color:#ffffff;  
+                          position:absolute; z-index:100; left:5px; bottom:70px; 
+                          background: url(/mnt/sdcard/bbaaabddhc/netdisk/3c7de7ea0e7c715a49132623d1eb97ea/553a27a4c3dcdf102879787a6a563244.png);
+                          background-position: -106px -543px;      
+                          line-height:24px;   }
+#new-msg-order   { top:10px;left:160px; color:white; position :absolute; font-size:10px; font-weight:bolder; line-height:24px;}
+/* end订单消息数*/
+
+/* 在线客服 新消息数*/
+.new-msg{ display:none;-webkit-text-size-adjust:none; 
+          font-size:10px; font-weight:bolder;text-align:center; width:24px;height:24px; 
+          vertical-align:middle;line-height:24px; color:#ffffff; position:relative; 
+          background: url(/mnt/sdcard/bbaaabddhc/netdisk/1aa94eef3e40dc2b2344d65e26b8b138/dd84a590ce97c5cc866f70b292e05f95.png);background-position: -106px -543px; }
+#new-msg-kefu   { top:-2px;left:30px; line-height:24px;}
+#new-msg-liuyan { top:4px; left:110px; line-height:24px;}
+#new-msg-glydg  { top:10px;left:120px; color:white; position :absolute; font-size:10px; font-weight:bolder; line-height:24px;}
+#new-msg-glyzx  { top:10px;left:160px; color:white; position:absolute; font-size:10px; font-weight:bolder; line-height:24px;}
+#new-msg-hydg   { top:10px;left:120px; color:white; position:absolute; font-size:10px; font-weight:bolder; line-height:24px;}
+#new-msg-hyzx   { top:10px;left:160px; color:white; position:absolute; font-size:10px; font-weight:bolder; line-height:24px;}
+/* end在线客服 新消息数*/
+
+
+/* 推送消息新消息数 */
+.pushmsg-display  { position:absolute;z-index:210000; display:none;-webkit-text-size-adjust:none; left:0px; bottom:44px; 	 
+                    font-size:10px; font-weight:bolder; width:45px; height:39px; line-height:39px;
+                    text-align:center; vertical-align:middle; color:#ffffff; 
+                    background: url(/mnt/sdcard/bbaaabddhc/netdisk/9ce4dcef24582513c73463f833053b01/11ce331be71fe88877c5ac7c12e86412.png);background-position: -6px -136px; } 
+
+
+
+/* 表单提示（用户管理设置的内容） */
+.temp-order-msg      { float:left; clear: both; width:90%; line-height:22px; COLOR: #555; font-size:16px; font-weight:650; 
+                       text-align:left; margin-left:15px; }
+.temp-order-msg p    { float:left; }
+
+
+
+/* 分页 */
+ .pager-div  { text-align:center; margin:20px auto; height:80px; vertical-align:middle; width:100%;   } 
+
+ .pager-rc   { display:none;    }  								                                        /* 共10条记录 */
+ .pager-pc   { margin:5px;    display:inline-block;  }   					                                        /* 共1页 */
+ .pager-cp   { display:none;    }   													/* 第1页 */
+ .pager-fp   { display:none;    }    													/* 首页 */
+ .pager-lp   { border:1px solid #B7B7B7; background-color: #DBEAF9; margin:5px; padding:7px;   width:50px;   display:inline-block;   }  /* 上页 */
+ .pager-cnum { border:1px solid red;     background-color: #DBEAF9; margin:5px; padding:7px;   width:20px;   display:inline-block;   
+	       color:red;  }  													        /* 当前页号 */ 
+ .pager-num  { display:none;    }    													/* 其它页号 */
+ .pager-np   { border:1px solid #B7B7B7; background-color: #DBEAF9; margin:5px; padding:7px;   width:50px;   display:inline-block;   }  /* 下页 */
+ .pager-ep   { display:none;    }    													/* 末页 */
+
+
+/* 通用按钮 */ 
+.push-box{ width:80%;height:38px; line-height:38px; padding-top:1px;
+	   vertical-align:middle;  TEXT-ALIGN: center; margin-left:auto; margin-right:auto; 
+  	   BORDER: #cccccc 1px solid; BACKGROUND-COLOR: red; 
+   	   color:#fff; font-size:18px; font-weight:650; 
+           border-radius: inherit; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); background-clip: padding-box; border-radius: 8px 8px 8px 8px; }
+
+
+
+ 
